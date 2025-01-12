@@ -1,0 +1,130 @@
+@import "@styles/scss/partials/mixins";
+@import "@styles/scss/partials/variables";
+
+.backdrop {
+    display: none;
+}
+
+.root {
+    position: relative;
+
+    p {
+        margin: 0;
+    }
+
+    svg {
+        fill: var(--color-info-main);
+
+        * {
+            fill: var(--color-info-main);
+        }
+    }
+
+    button {
+        padding: 0;
+    }
+
+    &__icon {
+        &__rtl {
+            transform: rotateY(180deg);
+        }
+    }
+
+    &__popup {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-normal);
+        background-color: var(--color-hint-background);
+        width: 300px;
+        position: absolute;
+        right: -20px;
+        top: 28px;
+        z-index: 1000;
+        box-shadow: var(--shadow-alert);
+        border-radius: var(--border-radius-small);
+        padding: var(--spacing-x-large);
+        direction: rtl;
+        @include font("body2");
+        color: var(--color-info-plus-2);
+
+        &:before {
+            content: "";
+            width: 10px;
+            height: 10px;
+            transform: rotate(-45deg);
+            background-color: var(--color-hint-background);
+            position: absolute;
+            top: -5px;
+            right: 24px;
+        }
+    }
+}
+
+@include xs {
+    .backdrop {
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--black);
+        position: fixed;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        z-index: -1;
+
+        &__display {
+            opacity: 0.8;
+            z-index: 800;
+        }
+    }
+
+    .root {
+        &__popup {
+            position: fixed;
+            bottom: 100%;
+            height: fit-content;
+            top: unset;
+            width: 100vw;
+            right: 0;
+            left: 0;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            border-top-right-radius: var(--border-radius-x-large);
+            border-top-left-radius: var(--border-radius-x-large);
+            padding: var(--spacing-xx-large);
+            background-color: var(--color-background-paper-level-1);
+            color: var(--color-text-primary-main);
+            transition: bottom 0.3s ease-in-out 0s;
+
+            &__open {
+                bottom: 0;
+            }
+
+            &__title {
+                @include font("subtitle1");
+                margin-bottom: var(--spacing-small);
+                text-align: center;
+            }
+
+            &__close {
+                display: flex;
+                justify-content: flex-end;
+
+                svg {
+                    width: 20px;
+                    height: 20px;
+
+                    path {
+                        fill: var(--color-gray-level-600);
+                    }
+                }
+            }
+
+            &:before {
+                display: none;
+            }
+        }
+    }
+}

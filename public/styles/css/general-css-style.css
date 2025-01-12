@@ -1,0 +1,184 @@
+@import "./partials/_base-token.css";
+@import "./partials/_rich-editor.css";
+@import "./partials/_general-token.css";
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-family), var(--font-family-alternate);
+  margin: 0;
+  padding: 0;
+  font-feature-settings: "ss03";
+  font-variation-settings: "FANU" 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100%;
+  position: relative;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    border-radius: 20px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-gray-level-300);
+    border-radius: 20px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-gray-level-100);
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 50px rgba(255, 255, 255, 0) !important;
+  -webkit-text-fill-color: unset !important;
+  -webkit-background-clip: text;
+  box-shadow: inset 0 0 20px 20px #00000000;
+}
+
+
+a {
+  text-decoration: none !important;
+}
+
+.en {
+  font-variation-settings: "FANU" 0 !important;
+  font-feature-settings: normal !important;
+}
+
+.ltr {
+  direction: ltr;
+}
+
+.rtl {
+  direction: rtl;
+}
+
+div:focus-visible {
+  outline: none !important;
+}
+
+label:focus-visible {
+  outline-width: 1px !important;
+  outline-color: var(--color-gray-level-600);
+  outline-style: solid;
+  border-radius: var(--border-radius-small);
+  outline-offset: 0;
+}
+
+.renderHTMLContent p {
+  font-size: var(--font-size-body2);
+  font-weight: var(--font-weight-body2);
+  line-height: var(--line-height-body2);
+  margin: 0;
+}
+
+.tinyUnit {
+  font-size: var(--font-size-tiny);
+  margin-right: var(--spacing-xx-small);
+  font-weight: var(--font-weight-tiny);
+  line-height: var(--line-height-tiny);
+}
+
+.noScroll {
+  overflow: hidden;
+  overflow-y: hidden !important;
+}
+
+.generalLayoutHeader {
+  height: 110px !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .generalLayoutHeader {
+    height: 110px;
+  }
+}
+
+.MuiLoadingButton-loading .MuiButton-startIcon {
+  display: none;
+}
+
+.MuiLoadingButton-loading .MuiButton-endIcon {
+  display: none;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 50px transparent inset !important;
+    /* Change the color to your own background color */
+    -webkit-text-fill-color: var(--color-text-primary-main) !important;
+  }
+
+  input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 50px transparent inset !important;
+    -webkit-text-fill-color: var(--color-text-primary-main) !important;
+  }
+}
+
+.commonContainer {
+  max-width: var(--max-dashboard-container-size) !important;
+  margin: var(--spacing-xx-large) auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100%;
+}
+
+.errorRoot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: var(--spacing-xx-large);
+  height: 100%;
+}
+
+.errorContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  height: 100%;
+}
+
+.errorImage {
+  max-width: 100%;
+  height: auto;
+}
+
+.ticketUserRemark{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes mui-auto-fill {
+  from {}
+}
+
+
+@keyframes mui-auto-fill-cancel {
+  from {}
+}

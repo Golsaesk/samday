@@ -1,0 +1,67 @@
+.root {
+    display: flex;
+    overflow: visible;
+    &__circle {
+        &__1 {
+            animation: -translateX 2.2s infinite;
+
+            @keyframes -translateX {
+                0% {
+                    transform: translateX(0);
+                }
+                50% {
+                    transform: translateX(-20px);
+                }
+                100% {
+                    transform: translateX(0);
+                }
+            }
+        }
+        &__2 {
+            animation: translateX 2.2s infinite;
+
+            @keyframes translateX {
+                0% {
+                    transform: translateX(0);
+                }
+                50% {
+                    transform: translateX(20px);
+                }
+                100% {
+                    transform: translateX(0);
+                }
+            }
+        }
+    }
+
+    &__rect {
+        animation: rotate 2.2s infinite forwards;
+        transform-origin: bottom right;
+        @keyframes rotate {
+            0% {
+                transform: rotate(0);
+            }
+            50% {
+                transform: rotate(8deg);
+            }
+            100% {
+                transform: rotate(0);
+            }
+        }
+    }
+
+    &__wave {
+        animation: wave 2.2s infinite forwards;
+        @keyframes wave {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.3;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    }
+}

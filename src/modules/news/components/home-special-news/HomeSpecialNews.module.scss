@@ -1,0 +1,67 @@
+@import "@styles/scss/partials/variables";
+@import "@styles/scss/partials/mixins";
+
+.root {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-primary-minus-2);
+    margin-bottom: var(--spacing-xx-large);
+    padding: var(--spacing-xx-large) 0;
+
+    &__container {
+        width: 100%;
+        align-items: center;
+        display: flex;
+        gap: var(--spacing-xx-large);
+
+        h2 {
+            color: var(--color-text-primary-minus-1);
+        }
+
+        &__list {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: flex-start;
+            gap: var(--spacing-xx-large);
+
+            &__item {
+                width: calc(50% - var(--spacing-large));
+            }
+        }
+    }
+}
+
+@include down($screen-md-end) {
+    .root {
+        &__container {
+            gap: var(--spacing-x-large);
+
+            &__list {
+                gap: var(--spacing-x-large);
+
+                &__item {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@include xs {
+    .root {
+
+        &__container {
+
+            h2 {
+                font-size: var(--font-size-h5);
+                font-weight: var(--font-weight-h5);
+                line-height: var(--line-height-h5);
+            }
+        }
+    }
+}

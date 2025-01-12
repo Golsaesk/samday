@@ -1,0 +1,159 @@
+@import "@styles/scss/partials/mixins";
+@import "@styles/scss/partials/variables";
+
+.root {
+    display: table-cell;
+    vertical-align: top;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+
+        &__label {
+            display: flex;
+            background-color: var(--color-background-paper-level-1);
+            align-items: center;
+            justify-content: inherit;
+            text-align: center;
+            width: 100%;
+            font-size: var(--font-size-body2);
+            font-weight: var(--font-weight-body2);
+            line-height: var(--line-height-body2);
+            padding: var(--spacing-large) var(--spacing-normal);
+            min-height: 60px;
+        }
+
+        &__value {
+            display: flex;
+            justify-content: inherit;
+            align-items: center;
+            padding: var(--spacing-large) var(--spacing-normal);
+            font-size: var(--font-size-body2);
+            font-weight: var(--font-weight-body2);
+            line-height: var(--line-height-body2);
+            color: var(--color-text-primary-minus-1);
+            width: 100%;
+            height: 100%;
+            min-height: 60px;
+
+            a {
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+
+    &__link {
+        max-width: 60px;
+        min-width: 60px;
+    }
+
+    div:global(.firstCell) {
+        padding-right: var(--spacing-xx-large);
+    }
+
+    div:global(.lastCell) {
+        padding-left: var(--spacing-xx-large);
+    }
+}
+
+@include down(1300px) {
+    .root {
+        max-width: unset !important;
+        display: flex;
+        flex-direction: row;
+        gap: var(--spacing-normal);
+        height: auto;
+
+        &__link {
+            max-width: unset;
+            min-width: unset;
+            width: auto;
+        }
+
+        &__container {
+            display: flex;
+            flex-direction: row;
+            gap: var(--spacing-normal);
+
+            &__label {
+                display: flex;
+                min-height: unset;
+                max-height: unset;
+                background-color: unset;
+                align-items: flex-start;
+                justify-content: flex-start;
+                width: 100%;
+                border-bottom: none;
+                border-left: 1px solid var(--color-gray-level-200);
+                min-width: 100px;
+                max-width: 100px;
+                padding: var(--spacing-x-small);
+                color: var(--color-gray-level-700);
+                text-align: right;
+            }
+
+            &__value {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                padding: var(--spacing-x-small);
+                min-height: unset;
+                width: 100%;
+                height: auto;
+
+                a {
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }
+
+        div:global(.firstCell) {
+            padding-right: 0;
+        }
+
+        div:global(.lastCell) {
+            padding-left: 0;
+        }
+
+        div:global(.variant_tool) {
+            justify-content: flex-end;
+        }
+    }
+}
+
+@include xs {
+    .root {
+        &__container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between !important;
+            align-items: center;
+            gap: var(--spacing-normal);
+            width: 100%;
+
+            &__label {
+                border-left: none;
+                padding: 0;
+                width: auto;
+                min-width: unset;
+                max-width: unset;
+                padding-left: var(--spacing-large);
+            }
+
+            &__value {
+                justify-content: flex-end;
+                padding: 0;
+                width: auto;
+            }
+        }
+    }
+
+    .root:global(.type_tool) {
+        width: 100%;
+    }
+}

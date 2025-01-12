@@ -1,0 +1,20 @@
+@import "@styles/scss/partials/mixins";
+@import "@styles/scss/partials/variables";
+
+.root {
+    &__link {
+        font-size: var(--font-size-caption);
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+        color: var(--color-primary-main);
+        span {
+            border-bottom: 1px solid var(--color-primary-main);
+        }
+        svg {
+            width: 18px;
+        }
+    }
+}

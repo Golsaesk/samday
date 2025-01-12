@@ -1,0 +1,35 @@
+@import "@styles/scss/partials/mixins";
+@import "@styles/scss/partials/variables";
+
+.root {
+    width: 100%;
+    border-radius: var(--spacing-normal);
+    font-size: var(--font-size-h6);
+
+    &__editor {
+        width: 100%;
+        border-radius: var(--spacing-normal);
+        font-size: var(--font-size-h6);
+
+        &__controls {
+            background-color: var(--color-dashboard-panel-paper-level-1);
+            border-top-right-radius: var(--spacing-normal);
+            border-top-left-radius: var(--spacing-normal);
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+            padding: var(--spacing-normal);
+        }
+
+        &__error {
+            border-color: var(--color-error-main);
+
+            &__text {
+                margin-top: 3px;
+                text-align: right;
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,75 @@
+@import "@styles/scss/partials/mixins";
+@import "@styles/scss/partials/variables";
+
+.root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+
+    &__container {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 12px;
+        padding: 24px;
+
+        &__image {
+            padding-bottom: 12px;
+            padding: 0 48px;
+        }
+
+        &__message {
+            margin-top: var(--spacing-xxx-large) !important;
+            color: var(--color-text-primary-minus-2) !important;
+        }
+    }
+}
+
+@media (min-width: 700px) and (max-width: 1200px) {
+    .root {
+
+        &__container {
+            min-width: unset;
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    .root {
+        margin-top: 56px;
+
+        &__container {
+            border: none !important;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .root {
+        &__container {
+            &__image {
+                width: 100%;
+                max-width: 400px;
+                height: auto;
+            }
+
+            &__message {
+                padding-top: 16px;
+            }
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .root {
+        &__container {
+            &__image {
+                max-width: 300px;
+            }
+        }
+    }
+}

@@ -1,0 +1,110 @@
+@import "@styles/scss/partials/variables";
+@import "@styles/scss/partials/mixins";
+
+.root {
+    margin-top: 0;
+    margin-bottom: var(--spacing-normal);
+    &__box {
+        display: flex;
+        align-items: center;
+        margin: 0px;
+        padding: 0px;
+        position: relative;
+        background: var(--color-gray-level-100);
+        min-width: 288px;
+        &__input {
+            font-size: var(--font-size-h6);
+            width: 100%;
+            height: var(--spacing-xxx-large);
+            border-radius: var(--spacing-normal);
+
+            input {
+                color: var(--color-primary-minus-1);
+                font-size: var(--font-size-h6);
+                padding: 0 var(--spacing-normal);
+                border-radius: var(--spacing-normal);
+                height: var(--spacing-xxx-large);
+                font-weight: var(--font-weight-medium);
+            }
+
+            ::placeholder {
+                font-size: var(--font-size-h6);
+                direction: rtl;
+                text-align: right;
+                color: var(--color-primary-minus-1);
+            }
+        }
+        [dir="ltr"] &__icon {
+            right: 0;
+            left: auto;
+        }
+
+        &__icon {
+            color: var(--color-primary-minus-1);
+            height: var(--spacing-xxx-large);
+            width: var(--spacing-xxx-large);
+            border-radius: var(--spacing-normal);
+            background: none;
+            text-align: center;
+            padding: var(--spacing-normal) var(--spacing-x-large);
+            position: absolute;
+            left: 0;
+            &:hover {
+                background-color: transparent;
+                border: none;
+            }
+            svg {
+                width: var(--spacing-xxx-large);
+                height: var(--spacing-x-large);
+            }
+        }
+    }
+
+    &__wrapper {
+        flex: 1;
+        border-radius: 0 var(--spacing-normal) var(--spacing-normal) 0;
+    }
+
+    ::placeholder {
+        /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: var(--color-primary-minus-1);
+        font-size: var(--font-size-h6);
+        opacity: 1;
+        /* Firefox */
+    }
+
+    :-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: var(--color-primary-minus-1);
+        font-size: var(--font-size-h6);
+    }
+
+    ::-ms-input-placeholder {
+        /* Microsoft Edge */
+        color: var(--color-primary-minus-1);
+        font-size: var(--font-size-h6);
+    }
+}
+
+@include sm {
+    .root {
+        margin-bottom: var(--spacing-normal);
+        padding-left: 0;
+        margin-top: 0;
+    }
+}
+
+@include xs {
+    .root {
+        padding-top: var(--spacing-normal);
+        &__box {
+            min-width: 100%;
+            &__input {
+                padding: 0 !important;
+                input::-webkit-input-placeholder {
+                    font-size: var(--font-size-h6);
+                }
+            }
+        }
+    }
+}

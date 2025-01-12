@@ -1,0 +1,86 @@
+@import "@styles/scss/partials/mixins";
+@import "@styles/scss/partials/variables";
+
+.root {
+    &__button {
+        font-size: var(--font-size-overline) !important;
+        font-weight: var(--font-weight-overline) !important;
+        color: var(--color-gray-level-600) !important;
+        white-space: nowrap;
+        border-radius: var(--border-radius-small) !important;
+        background: var(--color-background-paper-level-1);
+        border: 1px solid var(--color-border-3) !important;
+        opacity: 1;
+        color: var(--color-gray-level-500);
+        height: 40px;
+        padding: var(--spacing-normal) !important;
+        &:hover,
+        &:focus,
+        &:active {
+            border-color: var(--color-gray-level-1000);
+        }
+        svg {
+            width: 18px;
+            height: 18px;
+            margin-left: var(--spacing-small);
+            color: var(--color-gray-level-600) !important;
+        }
+        p {
+            font-size: var(--font-size-caption);
+            color: var(--color-gray-level-700);
+        }
+    }
+
+    &__popover {
+        &__paper {
+            width: 150px;
+            border-radius: 6px;
+            background: #fff;
+            border: 1px solid #ebebeb;
+            box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.08);
+        }
+    }
+}
+
+@include down($screen-sm-end) {
+    .root {
+        &__title {
+            padding: 0 var(--spacing-x-large);
+            background-color: var(--color-dashboard-panel-background-2);
+            height: 55px;
+            display: flex;
+            align-items: center;
+            background-color: var(--color-dashboard-panel-background-1);
+            box-shadow: var(--shadow-top-fixed-action);
+        }
+        &__formGroup {
+            padding: var(--spacing-x-large);
+        }
+    }
+}
+
+@include xs {
+    .root {
+        width: 100%;
+        &__title {
+            box-shadow: var(--shadow-top-fixed-action);
+            padding: var(--spacing-x-large) var(--spacing-xx-large);
+        }
+
+        &__formGroup {
+            padding: var(--spacing-x-large) var(--spacing-xx-large);
+            width: 100%;
+        }
+        &__button {
+            width: 40px;
+            max-width: 40px;
+            min-width: unset !important;
+            span {
+                margin: 0;
+                svg {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}

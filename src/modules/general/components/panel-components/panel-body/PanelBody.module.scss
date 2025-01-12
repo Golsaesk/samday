@@ -1,0 +1,59 @@
+@import "@styles/scss/partials/mixins";
+@import "@styles/scss/partials/variables";
+
+.root {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    width: 100%;
+    max-width: var(--max-container-size);
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__fullWidth {
+        max-width: 100%;
+        padding: 0;
+    }
+}
+
+.general {
+    max-width: var(--max-container-size);
+}
+
+.dashboard {
+    max-width: var(--max-dashboard-container-size);
+    padding: var(--spacing-xx-large);
+}
+
+.dashboardSection {
+    max-width: var(--max-dashboard-section-container-size);
+    background-color: var(--color-background-paper-level-1);
+    border: 1px solid var(--color-border-3);
+    border-radius: var(--border-radius-large);
+}
+
+.fullWidth {
+    max-width: 100%;
+    padding: 0;
+}
+
+@include down($screen-sm-end) {
+    .dashboard {
+        padding: var(--spacing-x-large);
+    }
+}
+
+@include xs {
+    .dashboardSection {
+        border-radius: 0;
+        border-width: 0;
+    }
+    .root {
+        padding-left: var(--spacing-x-large);
+        padding-right: var(--spacing-x-large);
+    }
+}

@@ -1,0 +1,9 @@
+.root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        transition: all 0.3s ease-in-out 0s;
+    }
+}

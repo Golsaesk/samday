@@ -1,0 +1,12 @@
+@import "@styles/scss/partials/mixins";
+@import "@styles/scss/partials/variables";
+
+.root {
+    &__stroke {
+        fill: var(--color-gray-level-500) !important;
+    }
+
+    &__line {
+        fill: var(--color-primary-main) !important;
+    }
+}

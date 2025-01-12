@@ -1,0 +1,58 @@
+{
+  "compilerOptions": {
+    "target": "es2015",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "allowSyntheticDefaultImports": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ],
+      "@main/*": [
+        "./*"
+      ],
+      "@modules/*": [
+        "./src/modules/*"
+      ],
+      "@root/*": [
+        "./src/*"
+      ],
+      "@styles/*": [
+        "./public/styles/*"
+      ],
+      "@messages/*": [
+        "./messages/*"
+      ],
+    },
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+, "src/app/api/credit/saman/[token].tsm"  ],
+  "exclude": [
+    "node_modules",
+    "**/*.js",
+  ]
+}

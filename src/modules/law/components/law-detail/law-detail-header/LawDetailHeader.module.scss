@@ -1,0 +1,114 @@
+@import "@styles/scss/partials/variables";
+@import "@styles/scss/partials/mixins";
+
+.root {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    &__issuer {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: var(--spacing-xxx-large);
+        padding-bottom: var(--spacing-xxx-large);
+
+        &__item {
+            width: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--spacing-small);
+            color: var(--color-text-primary-minus1);
+        }
+
+        &__text {
+            width: fit-content;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 var(--spacing-large);
+            font-size: var(--font-size-button2);
+            font-weight: var(--font-weight-button2);
+            color: var(--color-primary-main);
+            background-color: var(--color-primary-minus-2);
+            border-radius: var(--border-radius-small);
+            margin: 0;
+        }
+    }
+
+    &__subject {
+        color: var(--color-gray-level-500) !important;
+        padding-bottom: var(--spacing-small);
+
+        span {
+            padding-right: var(--spacing-small);
+        }
+    }
+
+    &__title {
+        color: var(--color-text-primary-main);
+        padding-bottom: var(--spacing-xxx-large);
+    }
+}
+
+@include down($screen-md-end) {
+    .root {
+        &__panel {
+            &__container {
+                &__sidebar {
+                    width: 35%;
+                }
+            }
+        }
+    }
+}
+
+@include down($screen-md-start) {
+    .root {
+
+        &__title {
+            font-size: var(--font-size-h2) !important;
+            font-weight: var(--font-weight-h2) !important;
+            line-height: var(--line-height-h2) !important;
+        }
+    }
+}
+
+@include down(750px) {
+    .root {
+
+        &__issuer {
+            padding-bottom: var(--spacing-xx-large);
+
+            &__text,
+            &__item {
+                height: 24px;
+                font-size: var(--font-size-tiny) !important;
+                font-weight: var(--font-weight-tiny) !important;
+            }
+        }
+
+        &__title {
+            font-size: var(--font-size-subtitle1) !important;
+            font-weight: var(--font-weight-subtitle1) !important;
+            line-height: var(--line-height-subtitle1) !important;
+            padding-bottom: var(--spacing-xx-large);
+
+        }
+    }
+}
+
+@include xs {
+    .root {
+        &__issuer {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: var(--spacing-x-large);
+        }
+    }
+}

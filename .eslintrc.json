@@ -1,0 +1,277 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "next"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
+  },
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "tsconfigRootDir": "./",
+    "sourceType": "module"
+  },
+  "globals": {
+    "React": true,
+    "google": true,
+    "mount": true,
+    "mountWithRouter": true,
+    "shallow": true,
+    "shallowWithRouter": true,
+    "context": true,
+    "expect": true,
+    "jsdom": true,
+    "JSX": true,
+    "BufferEncoding": true,
+    "NodeJS": true
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "import"
+  ],
+  "rules": {
+    "indent": 0,
+    "@typescript-eslint/indent": [
+      "error",
+      2
+    ],
+    "template-curly-spacing": [
+      0,
+      "never"
+    ],
+    "no-empty": [
+      "warn",
+      {
+        "allowEmptyCatch": true
+      }
+    ],
+    "func-names": [
+      "error",
+      "never"
+    ],
+    "no-console": "off",
+    "import/prefer-default-export": "off",
+    "no-case-declarations": "off",
+    "no-unused-vars": "off",
+    "comma-spacing": [
+      "warn",
+      {
+        "before": false,
+        "after": true
+      }
+    ],
+    "prefer-destructuring": [
+      "warn",
+      {
+        "VariableDeclarator": {
+          "array": false,
+          "object": true
+        },
+        "AssignmentExpression": {
+          "array": false,
+          "object": true
+        }
+      },
+      {
+        "enforceForRenamedProperties": false
+      }
+    ],
+    "array-bracket-spacing": 0,
+    // "array-bracket-spacing": [
+    //   "warn",
+    //   "always",
+    //   {
+    //     "singleValue": false,
+    //     "objectsInArrays": true,
+    //     "arraysInArrays": true
+    //   }
+    // ],
+    // "computed-property-spacing": 0,
+    "object-curly-spacing": 0,
+    "comma-dangle": [
+      0
+    ],
+    "@typescript-eslint/comma-dangle": [
+      2,
+      {
+        "arrays": "always",
+        "objects": "always",
+        "imports": "always",
+        "exports": "always",
+        "functions": "never"
+      }
+    ],
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "vars": "local",
+        "args": "none"
+      }
+    ],
+    "object-curly-newline": [
+      "warn",
+      {
+        "ObjectExpression": {
+          "multiline": true,
+          "minProperties": 2
+        },
+        "ObjectPattern": {
+          "minProperties": 2,
+          "multiline": true
+        },
+        "ImportDeclaration": {
+          "multiline": true,
+          "minProperties": 3
+        },
+        "ExportDeclaration": {
+          "multiline": true,
+          "minProperties": 3
+        }
+      }
+    ],
+    "linebreak-style": 0,
+    "react/jsx-filename-extension": [
+      0,
+      {
+        "allow": "as-needed",
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
+      }
+    ],
+    "react/jsx-props-no-spreading": [
+      0,
+      {
+        "html": "ignore",
+        "custom": "ignore",
+        "explicitSpread": "ignore",
+        "exceptions": ""
+      }
+    ],
+    "react/prop-types": 0,
+    "react/no-array-index-key": 0,
+    "react/no-unused-state": 0,
+    "react/destructuring-assignment": 0,
+    "react/prefer-stateless-function": [
+      0,
+      {
+        "ignorePureComponents": true
+      }
+    ],
+    "no-use-before-define": [
+      0
+    ],
+    "react/require-default-props": [
+      0
+    ],
+    "@typescript-eslint/no-use-before-define": [
+      1,
+      {
+        "functions": false,
+        "classes": false,
+        "variables": false
+      }
+    ],
+    "class-methods-use-this": "off",
+    "max-len": [
+      "error",
+      {
+        "code": 200
+      }
+    ],
+    "default-param-last": "off",
+    "@typescript-eslint/default-param-last": [
+      0
+    ],
+    "@typescript-eslint/type-annotation-spacing": [
+      2,
+      {
+        "before": false,
+        "after": true,
+        "overrides": {
+          "arrow": {
+            "before": true,
+            "after": true
+          }
+        }
+      }
+    ],
+    "jsx-a11y/anchor-is-valid": [
+      0,
+      {
+        "components": [
+          "Link"
+        ],
+        "specialLink": [
+          "hrefLeft",
+          "hrefRight"
+        ],
+        "aspects": [
+          "invalidHref",
+          "preferButton"
+        ]
+      }
+    ],
+    "key-spacing": [
+      "error",
+      {
+        "singleLine": {
+          "beforeColon": false,
+          "afterColon": true
+        },
+        "multiLine": {
+          "beforeColon": false,
+          "afterColon": true
+        }
+      }
+    ],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "off",
+    "arrow-spacing": [
+      "error",
+      {
+        "before": true,
+        "after": true
+      }
+    ],
+    "semi": "warn",
+    "no-trailing-spaces": "warn",
+    "no-multi-spaces": "warn",
+    "no-multiple-empty-lines": [
+      "warn",
+      {
+        "max": 1,
+        "maxEOF": 0
+      }
+    ],
+    "no-await-in-loop": "error",
+    "no-duplicate-case": "error",
+    "space-infix-ops": "warn",
+    "react/jsx-tag-spacing": [
+      1,
+      {
+        "closingSlash": "never",
+        "beforeSelfClosing": "always",
+        "afterOpening": "never"
+      }
+    ],
+    "switch-colon-spacing": [
+      "warn",
+      {
+        "after": true,
+        "before": false
+      }
+    ]
+  }
+}

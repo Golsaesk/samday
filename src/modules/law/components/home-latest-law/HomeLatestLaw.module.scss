@@ -1,0 +1,136 @@
+@import "@styles/scss/partials/variables";
+@import "@styles/scss/partials/mixins";
+
+.root {
+    width: 100%;
+    height: 256px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-gray-level-10);
+    margin-bottom: var(--spacing-xxx-large);
+
+    &__container {
+        height: 100%;
+        flex-direction: row !important;
+        justify-content: space-between;
+        gap: var(--spacing-xx-large);
+
+        &__mobileTitle {
+            display: none;
+        }
+
+        &__image {
+            height: 100%;
+            min-height: 256px;
+            width: calc(50% - var(--spacing-large));
+            border-radius: var(--border-radius-large);
+            position: relative;
+
+            img {
+                width: auto;
+                height: 100%;
+                border-radius: var(--border-radius-large);
+            }
+        }
+
+        &__content {
+            width: calc(50% - var(--spacing-large));
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: var(--spacing-large) 0;
+
+            &__title {
+                color: var(--color-primary-main) !important;
+                padding-bottom: var(--spacing-normal);
+            }
+
+            &__button {
+                svg {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+}
+
+@include down(950px) {
+    .root {
+        &__container {
+            &__image {
+                width: 40%;
+            }
+        }
+    }
+}
+
+@include down(750px) {
+    .root {
+        height: auto;
+        margin-bottom: 0;
+        margin-top: var(--spacing-xxx-large);
+
+        &__container {
+            flex-direction: column !important;
+            align-items: center;
+            justify-content: center;
+            gap: 0;
+
+            &__mobileTitle {
+                display: flex;
+                padding: var(--spacing-x-large) var(--spacing-xx-large);
+                color: var(--color-primary-main);
+            }
+
+            &__image {
+                width: 100%;
+                height: 256px;
+                order: 1;
+            }
+
+            &__content {
+                width: 100%;
+                order: 2;
+
+                &__title {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@include xs {
+    .root {
+
+        &__container {
+
+            &__image {
+                border-radius: 0;
+
+                img {
+                    border-radius: 0;
+                }
+            }
+
+            &__content {
+                padding: var(--spacing-x-large);
+            }
+        }
+    }
+}
+
+[dir="ltr"] {
+    .root {
+        &__container {
+            &__content {
+                &__button {
+                    svg {
+                        transform: unset;
+                    }
+                }
+            }
+        }
+    }
+}

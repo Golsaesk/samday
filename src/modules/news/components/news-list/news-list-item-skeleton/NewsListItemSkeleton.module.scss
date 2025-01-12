@@ -1,0 +1,36 @@
+@import "@styles/scss/partials/variables";
+@import "@styles/scss/partials/mixins";
+
+.root {
+    display: flex;
+    flex-direction: row;
+
+    &__image {
+        height: auto !important;
+        border-radius: var(--border-radius-large) !important;
+        border: 1px solid var(--color-border-3);
+    }
+
+    &__content {
+        margin-right: 10px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        &__title {
+            margin-bottom: 10px;
+        }
+
+        &__paragraph {
+            width: 100%;
+        }
+
+        &__footer {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+        }
+    }
+}

@@ -1,0 +1,101 @@
+@import "@styles/scss/partials/mixins";
+@import "@styles/scss/partials/variables";
+
+.root {
+    padding: var(--spacing-x-large) 0 var(--spacing-x-large) var(--spacing-xx-large);
+    display: flex;
+    gap: var(--spacing-xxx-large);
+    align-items: flex-start;
+    flex-direction: row;
+
+    &__title {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-normal);
+        position: relative;
+        white-space: nowrap;
+        height: 24px;
+
+        &::before {
+            content: "";
+            width: 24px;
+            height: 3px;
+            border-radius: 4px 0 0 4px;
+            background-color: var(--color-primary-main);
+        }
+    }
+
+    &__marks {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-large);
+        justify-content: flex-start;
+        width: 100%;
+        flex-wrap: wrap;
+
+        &__item {
+            display: flex;
+            align-items: center;
+            flex-wrap: nowrap;
+            gap: var(--spacing-normal);
+            font-size: var(--font-size-body2);
+            font-weight: var(--font-weight-body2);
+            padding-left: var(--spacing-large);
+            white-space: nowrap;
+            color: var(--color-text-primary-minus-2);
+
+            svg {
+                width: 24px;
+                height: 24px;
+                border-radius: 100%;
+                padding: 2px;
+                fill: var(--color-table-tools-icon);
+                border: 1px solid var(--color-table-border);
+                background-color: var(--color-table-tools-button);
+
+                * {
+                    fill: var(--color-table-tools-icon);
+                }
+            }
+        }
+    }
+}
+
+@include xs {
+    .root {
+        flex-wrap: wrap;
+        height: auto;
+        gap: var(--spacing-x-large);
+        padding-top: var(--spacing-x-large);
+        padding-bottom: var(--spacing-x-large);
+        padding-left: 0;
+
+        &__title {
+            width: 100%;
+        }
+
+        &__marks {
+            width: 100%;
+            padding-left: var(--spacing-xxx-large);
+            padding-right: var(--spacing-xxx-large);
+            flex-wrap: wrap;
+            justify-content: space-between;
+            &__item {
+                flex: 0 0 calc(50% - var(--spacing-small));
+                max-width: calc(50% - var(--spacing-small));
+                white-space: nowrap;
+            }
+        }
+    }
+}
+
+@include down(350px) {
+    .root {
+        &__marks {
+            &__item {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+    }
+}

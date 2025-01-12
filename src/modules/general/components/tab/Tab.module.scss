@@ -1,0 +1,53 @@
+@import "@styles/scss/partials/mixins";
+@import "@styles/scss/partials/variables";
+
+.root {
+    border-radius: 60px;
+    width: auto;
+    border: 1px solid var(--color-gray-level-300);
+    height: 50px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    position: relative;
+
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: var(--font-size-h5);
+        font-weight: var(--font-weight-h5);
+        cursor: pointer;
+        line-height: 50px;
+        transition: color 0.3s ease-in-out 0s;
+
+        &__active {
+            color: var(--color-primary-main);
+        }
+    }
+
+    &__activeFrame {
+        position: absolute;
+        top: -2px;
+        bottom: -1px;
+        height: 51px;
+        border: 2px solid var(--color-primary-main);
+        border-radius: 60px;
+        right: -1px;
+        transition: right 0.3s ease-in-out 0s;
+    }
+}
+
+@include xs {
+    .root {
+        height: 45px;
+
+        &__item {
+            height: 45px;
+        }
+
+        &__activeFrame {
+            height: 46px;
+        }
+    }
+}

@@ -1,0 +1,70 @@
+@import "@styles/scss/partials/mixins";
+@import "@styles/scss/partials/variables";
+
+.root {
+    &__paper {
+        height: 100vh !important;
+        border-radius: 0 !important;
+    }
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        padding: var(--spacing-x-large) var(--spacing-xx-large);
+        box-shadow: var(--shadow-top-fixed-action);
+        border-bottom: 1px solid var(--color-gray-level-100);
+        align-items: center;
+        z-index: 1;
+        &__text {
+            direction: ltr;
+        }
+        &__closeIcon {
+            display: flex;
+            cursor: pointer;
+            svg {
+                fill: var(--color-gray-level-600);
+                width: 22px;
+                height: 22px;
+            }
+        }
+    }
+    &__content {
+        overflow-x: hidden;
+        overflow-y: auto;
+        margin-bottom: 64px;
+        &::-webkit-scrollbar {
+            -webkit-appearance: none;
+            height: 4px;
+            width: 4px;
+            background-color: var(--color-gray-level-100);
+        }
+        &::-webkit-scrollbar-thumb {
+            border-radius: 7px;
+            background-color: var(--color-gray-level-300);
+            box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+        }
+        &__item {
+            padding: var(--spacing-x-large) var(--spacing-xx-large);
+            border-bottom: 1px solid var(--color-gray-level-100);
+            &__text {
+                &__ltr {
+                    direction: ltr;
+                }
+            }
+            &__selected {
+                background-color: var(--color-gray-level-50);
+            }
+        }
+    }
+    &__buttons {
+        display: flex;
+        background-color: var(--color-gray-level-0);
+        gap: var(--spacing-xx-large);
+        padding: var(--spacing-large) var(--spacing-xx-large);
+        box-shadow: var(--shadow-top-light);
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        max-height: 64px;
+    }
+}

@@ -1,0 +1,55 @@
+@import "@styles/scss/partials/variables";
+@import "@styles/scss/partials/mixins";
+
+.root {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid var(--color-divider-1);
+    margin-bottom: calc(var(--spacing-normal) * 5);
+
+    &__accordion {
+        background-color: var(--color-gray-level-10);
+
+        &__listSubheader {
+            padding: 0;
+            font-size: var(--font-size-h3);
+            font-weight: var(--font-weight-h3);
+            color: var(--color-text-primary-minus-2);
+            background-color: var(--color-gray-level-10);
+        }
+
+        &__list {
+            display: flex;
+            flex-direction: column;
+            border-right: 2px solid var(--color-primary-main,);
+            gap: var(--spacing-large);
+            background-color: var(--color-gray-level-10);
+            margin-bottom: calc(var(--spacing-normal) * 5);
+
+            a {
+                cursor: pointer;
+                font-size: var(--font-size-h6);
+                font-weight: var(--font-weight-h6);
+                color: var(--color-text-primary-minus-2);
+            }
+        }
+
+        svg {
+            width: 18px;
+            height: 18px;
+        }
+    }
+}
+
+@include down($screen-lg-start) {
+    .root {
+        margin-bottom: var(--spacing-xx-large);
+    }
+}
+
+@include down(750px) {
+    .root {
+        margin-bottom: var(--spacing-x-large);
+        display: none;
+    }
+}

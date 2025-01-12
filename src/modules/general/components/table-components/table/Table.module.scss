@@ -1,0 +1,32 @@
+@import "@styles/scss/partials/mixins";
+@import "@styles/scss/partials/variables";
+
+.root {
+    display: table;
+    width: 100%;
+
+    > div:nth-child(2n + 1) {
+        background-color: var(--color-table-row);
+    }
+}
+
+@include down(1300px) {
+    .root {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@include down($screen-sm-end) {
+    .root {
+        > div:nth-child(2n + 1) {
+            background-color: transparent;
+        }
+        > div {
+            border-bottom: 1px solid var(--color-gray-level-200);
+        }
+        > div:last-child {
+            border-bottom: none;
+        }
+    }
+}

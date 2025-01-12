@@ -1,0 +1,19 @@
+@import "@styles/scss/partials/mixins";
+@import "@styles/scss/partials/variables";
+
+.root {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: var(--spacing-xx-large);
+
+    
+}
+
+@include xs {
+    .root {
+        flex-wrap: wrap;
+        gap: var(--spacing-x-large);
+      
+    }
+}

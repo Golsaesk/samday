@@ -1,0 +1,61 @@
+@import "@styles/scss/partials/mixins";
+@import "@styles/scss/partials/variables";
+
+.root {
+    &__paper {
+        min-width: 400px;
+        max-width: 600px;
+        padding: var(--spacing-xxx-large);
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &__close {
+            position: absolute;
+            top: var(--spacing-normal);
+            left: var(--spacing-normal);
+            cursor: pointer;
+
+            svg {
+                width: 24px;
+                height: 24px;
+                fill: var(--color-gray-level-600);
+
+                path {
+                    fill: var(--color-gray-level-600);
+                }
+            }
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: var(--border-radius-small);
+        }
+    }
+}
+
+@include xs {
+    .root {
+        &__paper {
+            background-color: #ffffff00;
+            &__close {
+                width: 24px;
+                height: 24px;
+                border-radius: 100%;
+                background-color: var(--color-background-paper-level-1);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                top: var(--spacing-x-large);
+                left: var(--spacing-large);
+
+                svg {
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+        }
+    }
+}

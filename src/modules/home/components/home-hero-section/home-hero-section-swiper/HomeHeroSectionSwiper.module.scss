@@ -1,0 +1,99 @@
+@import "@styles/scss/partials/variables";
+@import "@styles/scss/partials/mixins";
+
+.root {
+    width: 100%;
+    margin-top: -90px;
+    border-radius: var(--border-radius-large);
+
+    &__container {
+        width: 100%;
+        border-radius: var(--border-radius-large);
+        position: relative;
+
+        &__swiper {
+            width: 100%;
+            border-radius: var(--border-radius-large);
+            position: static;
+
+            &__slide {
+                width: 100%;
+                height: 330px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: var(--color-primary-minus-1);
+                border-radius: var(--border-radius-large);
+            }
+
+            div:global(.swiper-button-next) {
+                width: 16px;
+                height: 16px;
+                background-color: var(--color-gray-level-0);
+                border-radius: var(--border-radius-x-small);
+                right: 51%;
+                left: unset;
+                top: unset;
+                bottom: var(--spacing-x-large);
+
+                &::after {
+                    content: url("/images/home/arrow-left.svg");
+                    font-size: 10px;
+                }
+            }
+
+            div:global(.swiper-button-prev) {
+                width: 16px;
+                height: 16px;
+                background-color: var(--color-gray-level-0);
+                border-radius: var(--border-radius-x-small);
+                right: unset;
+                left: 51%;
+                top: unset;
+                bottom: var(--spacing-x-large);
+
+                &::after {
+                    content: url("/images/home/arrow-left.svg");
+                    font-size: 14px;
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+}
+
+@include down($screen-md-end) {
+    .root {
+        margin-top: -110px;
+    }
+}
+
+@include down(750px) {
+    .root {
+        margin-top: -180px;
+
+        &__container {
+            &__swiper {
+                &__slide {
+                    height: 250px;
+                }
+            }
+        }
+    }
+}
+
+@include down(500px) {
+    .root {
+        &__container {
+            &__swiper {
+                div:global(.swiper-button-next) {
+                    right: 52%;
+                }
+
+                div:global(.swiper-button-prev) {
+                    left: 52%;
+                }
+            }
+        }
+    }
+}

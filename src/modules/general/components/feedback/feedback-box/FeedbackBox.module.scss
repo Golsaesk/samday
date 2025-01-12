@@ -1,0 +1,130 @@
+@import "@styles/scss/partials/mixins";
+@import "@styles/scss/partials/variables";
+
+.root {
+    &__form {
+        &__row {
+            display: flex;
+            flex-flow: wrap row;
+            width: 100%;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: var(--spacing-x-large);
+
+            &__textField {
+                flex: 1;
+                margin-bottom: var(--spacing-x-large);
+
+                input {
+                    width: 100%;
+                    max-width: unset;
+                }
+
+                &__root {
+                    width: 100%;
+                }
+
+                &__full__width {
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                    padding: var(--spacing-small) 0;
+                }
+            }
+
+            &__textArea {
+                width: 100%;
+                margin-bottom: var(--spacing-x-large);
+
+                &__root {
+                    textarea {
+                        &:first-child {
+                            min-height: 100px;
+                        }
+                    }
+                }
+            }
+
+            &__captcha {
+                padding-left: var(--spacing-normal);
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+
+                &__error {
+                    color: var(--color-error-main);
+                    @include font(tiny);
+                    display: flex;
+                    width: 100%;
+                }
+            }
+        }
+
+        &__actions {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+
+            > div {
+                flex: 1 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                button {
+                    height: 46px;
+                }
+            }
+        }
+    }
+    &__error {
+        margin-bottom: var(--spacing-xx-large);
+    }
+}
+
+@include xs {
+    .root {
+        &__form {
+            &__row {
+                flex-direction: column;
+                padding: 0 var(--spacing-normal);
+                gap: 0;
+
+                &__textField {
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                    width: 100%;
+                    padding: 0;
+                    padding-bottom: var(--spacing-x-large);
+                    margin: 0;
+                }
+
+                &__textArea {
+                    padding: 0;
+                    padding-bottom: var(--spacing-x-large);
+                    margin-bottom: 0;
+                }
+
+                &__captcha {
+                    width: 100%;
+                    padding: 0;
+                    margin-bottom: var(--spacing-large);
+                }
+            }
+
+            &__actions {
+                justify-content: center;
+                align-items: flex-end;
+
+                button {
+                    display: flex;
+                    align-items: center;
+
+                    svg {
+                        width: 16px;
+                        height: 16px;
+                    }
+                }
+            }
+        }
+    }
+}

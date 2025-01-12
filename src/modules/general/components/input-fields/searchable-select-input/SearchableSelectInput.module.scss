@@ -1,0 +1,124 @@
+@import "@styles/scss/partials/variables";
+@import "@styles/scss/partials/mixins";
+
+.root {
+    position: relative;
+    width: 100%;
+    &__input {
+        > div {
+            padding-left: 0;
+        }
+
+        &__ltr {
+            > div {
+                padding-right: 0;
+                padding-left: 14px;
+            }
+        }
+        &__adornment {
+            display: flex;
+            font-size: var(--font-size-tiny);
+            font-weight: var(--font-weight-tiny);
+            white-space: nowrap;
+            align-items: center;
+            color: var(--color-gray-level-800);
+            padding: 0 14px;
+            border-right: 1px solid var(--color-gray-level-300);
+            border-top-left-radius: var(--border-radius-small);
+            border-bottom-left-radius: var(--border-radius-small);
+            cursor: pointer;
+            margin-right: var(--spacing-large);
+
+            &__full {
+                height: 48px;
+                background-color: var(--color-dropdown-paper-level-2);
+            }
+
+            &__ltr {
+                border-right: none;
+                border-left: 1px solid var(--color-gray-level-300);
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+                border-top-right-radius: var(--border-radius-small);
+                border-bottom-right-radius: var(--border-radius-small);
+            }
+
+            &__noBorder {
+                border: none;
+            }
+
+            &__arrow {
+                cursor: pointer;
+                display: grid;
+                width: 20px;
+                margin-right: var(--spacing-x-small);
+
+                svg {
+                    fill: var(--color-gray-level-600);
+                    width: 20px;
+                    height: 20px;
+                    margin-left: -4px;
+                    transition: all 0.3s ease-in-out 0s;
+                    path {
+                        fill: var(--color-gray-level-600);
+                    }
+                }
+
+                &__ltr {
+                    margin-left: var(--spacing-x-small);
+                    margin-right: 0;
+
+                    svg {
+                        margin-right: -4px;
+                        margin-left: 0;
+                    }
+                }
+
+                &__noMargin {
+                    margin: 0;
+                }
+
+                &__up {
+                    svg {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+        }
+
+        input {
+            font-variation-settings: "FANU" 1 !important;
+            cursor: pointer;
+        }
+
+        input::-webkit-input-placeholder {
+            text-align: right;
+            font-weight: normal !important;
+        }
+
+        input::-moz-placeholder {
+            text-align: right;
+            font-weight: normal !important;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            appearance: none;
+            margin: 0;
+        }
+
+        /* Firefox */
+        input[type="number"] {
+            -moz-appearance: textfield;
+            appearance: textfield;
+        }
+    }
+}
+@include xs {
+    .root {
+        input {
+            width: 100%;
+        }
+    }
+}

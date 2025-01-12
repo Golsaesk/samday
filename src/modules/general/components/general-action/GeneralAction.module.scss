@@ -1,0 +1,24 @@
+@import "@styles/scss/partials/variables";
+@import "@styles/scss/partials/mixins";
+
+.root {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: var(--spacing-large);
+    margin-top: var(--spacing-xx-large);
+
+    &__button {
+        width: fit-content;
+        border-radius: var(--border-radius-small) !important;
+        height: 36px !important;
+        padding: var(--spacing-normal) var(--spacing-x-large) !important;
+        gap: var(--spacing-normal) !important;
+    }
+
+    &__green {
+        background-color: var(--color-secondary-main) !important;
+    }
+}

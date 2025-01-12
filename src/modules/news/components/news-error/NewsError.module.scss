@@ -1,0 +1,16 @@
+@import "@styles/scss/partials/variables";
+@import "@styles/scss/partials/mixins";
+
+.root {
+    min-width: 100%;
+    border: 1px solid var(--color-border-3);
+    border-radius: var(--border-radius-large);
+    margin-bottom: var(--spacing-xxx-large);
+    padding: 100px var(--spacing-xx-large);
+}
+
+@include xs {
+    .root {
+        padding: 40px var(--spacing-xx-large);
+    }
+}

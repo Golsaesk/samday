@@ -1,0 +1,40 @@
+@import "@styles/scss/partials/mixins";
+@import "@styles/scss/partials/variables";
+
+.root {
+    display: flex;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 60px var(--spacing-xx-large);
+    gap: var(--spacing-xx-large);
+
+    button {
+        margin-top: var(--spacing-normal);
+    }
+
+    &__content {
+        p {
+            color: var(--color-text-primary-minus-2);
+        }
+    }
+}
+
+@include down(1200px) {
+    .root {
+        flex-direction: column !important;
+        gap: var(--spacing-xx-large);
+        a {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+        img {
+            width: 50%;
+            height: auto;
+            min-width: 220px;
+        }
+    }
+}

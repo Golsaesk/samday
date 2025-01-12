@@ -1,0 +1,17 @@
+@import "@styles/scss/partials/variables";
+@import "@styles/scss/partials/mixins";
+
+.root {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 56px;
+}
+
+@include down(750px) {
+    .root {
+        margin-top: 0;
+    }
+}

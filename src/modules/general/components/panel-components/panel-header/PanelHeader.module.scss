@@ -1,0 +1,83 @@
+@import "@styles/scss/partials/mixins";
+@import "@styles/scss/partials/variables";
+
+.root {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    flex-direction: row;
+    gap: var(--spacing-normal);
+    width: 100%;
+    padding-bottom: var(--spacing-x-large);
+
+    &:before {
+        content: "";
+        width: 4px;
+        height: var(--line-height-h3);
+        background-color: var(--color-primary-main);
+        border-radius: var(--border-radius-normal);
+    }
+}
+
+.general {
+    display: flex;
+    padding-top: var(--spacing-x-large);
+    max-width: var(--max-container-size);
+}
+
+.dashboard {
+    padding-top: var(--spacing-xxx-large);
+    max-width: var(--max-dashboard-container-size);
+}
+
+.dashboardSection {
+    max-width: var(--max-dashboard-section-container-size);
+    padding-top: var(--spacing-xx-large);
+    font-size: var(--font-size-subtitle1) !important;
+    font-weight: var(--font-weight-subtitle1) !important;
+    line-height: var(--line-height-subtitle1) !important;
+
+    &:before {
+        height: var(--line-height-subtitle1);
+    }
+}
+
+.fullWidth {
+    max-width: 100%;
+    padding: 0;
+}
+
+@include down($screen-sm-end) {
+    .root {
+        font-size: var(--font-size-h4) !important;
+        font-weight: var(--font-weight-h4) !important;
+        line-height: var(--line-height-h4) !important;
+
+        &:before {
+            height: var(--line-height-h4);
+        }
+    }
+}
+
+@include xs {
+    .root {
+        padding-left: var(--spacing-x-large);
+        padding-right: var(--spacing-x-large);
+
+        font-size: var(--font-size-h6) !important;
+        font-weight: var(--font-weight-h6) !important;
+        line-height: var(--line-height-h6) !important;
+
+        &:before {
+            height: var(--line-height-h5);
+        }
+    }
+
+    .dashboard {
+        padding-top: var(--spacing-x-large) !important;
+    }
+
+    .dashboardSection {
+        padding-top: var(--spacing-x-large) !important;
+    }
+}

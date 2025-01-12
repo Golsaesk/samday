@@ -1,0 +1,27 @@
+@import "@styles/scss/partials/mixins";
+@import "@styles/scss/partials/variables";
+
+.root {
+    padding: var(--spacing-x-large) var(--spacing-xx-large) var(--spacing-xx-large);
+
+    &__fullScreen {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    &__collapsed {
+        padding-bottom: 0;
+    }
+}
+
+@include down($screen-sm-end) {
+    .root {
+        padding: var(--spacing-x-large);
+    }
+}
+
+@include xs {
+    .root {
+        padding: var(--spacing-large) var(--spacing-large) var(--spacing-x-large);
+    }
+}

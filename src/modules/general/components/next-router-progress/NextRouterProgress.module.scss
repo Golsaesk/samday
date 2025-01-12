@@ -1,0 +1,12 @@
+.root {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    > span {
+        background-color: #ebe3ca;
+        > span {
+            background-color: #bba14f;
+        }
+    }
+}

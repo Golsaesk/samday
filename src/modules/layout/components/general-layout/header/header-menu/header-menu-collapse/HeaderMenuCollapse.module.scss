@@ -1,0 +1,134 @@
+@import "@styles/scss/partials/variables";
+@import "@styles/scss/partials/mixins";
+
+.root {
+
+    &__icon {
+        width: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    &__collapse {
+        position: absolute;
+        top: 56px;
+        right: 0;
+        z-index: 10000;
+        width: 100%;
+        background-color: var(--color-background-paper-level-2);
+        box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &__wrapper {
+            display: flex;
+            height: auto;
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    &__drawer {
+        display: none;
+    }
+}
+
+@include down($screen-sm-end) {
+    .root {
+        &__collapse {
+            &__wrapper {
+                max-height: calc(100vh - 56px);
+
+                &__list {
+                    max-height: calc(100% - 50px) !important;
+                    overflow-y: auto;
+                }
+            }
+        }
+    }
+}
+
+@include down(750px) {
+    .root {
+
+        &__collapse {
+            display: none;
+
+            &__wrapper {
+                height: calc(100vh - 56px);
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                gap: var(--spacing-x-large);
+                position: relative;
+
+                &__list {
+                    max-height: calc(100% - 115px) !important;
+                }
+            }
+        }
+
+        &__drawer {
+            position: relative;
+            display: block;
+
+            &__paper {
+                margin-top: 56px;
+                width: 100%;
+                background-color: var(--color-background-paper-level-2);
+                height: calc(100vh - 56px) !important;
+                border-radius: 0 !important;
+                display: flex;
+                flex-direction: column;
+
+                &__search {
+                    width: 100%;
+                    height: 56px;
+                    background-color: var(--color-primary-minus-2);
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: var(--spacing-x-large);
+                    padding: 0 var(--spacing-x-large);
+
+                    &__input {
+                        width: 80%;
+                        flex: 1;
+                        height: 40px;
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        border-radius: var(--border-radius-small);
+                        padding: 0 var(--spacing-normal);
+                        background-color: var(--color-gray-level-0);
+
+                        > div {
+                            height: 38px;
+                            width: 100%;
+
+                            &::after,
+                            &::before {
+                                display: none;
+                                border: none !important;
+                            }
+                        }
+                    }
+
+                    &__close {
+                        width: auto;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+            }
+
+        }
+    }
+}

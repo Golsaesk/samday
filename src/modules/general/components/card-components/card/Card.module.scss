@@ -1,0 +1,34 @@
+@import "@styles/scss/partials/mixins";
+@import "@styles/scss/partials/variables";
+
+.root {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: 1px solid var(--color-border-3);
+    border-radius: var(--border-radius-large);
+}
+
+.root:global(.color_paper1) {
+    background-color: var(--color-background-paper-level-1);
+}
+
+.root:global(.color_paper2) {
+    background-color: var(--color-background-page-1);
+}
+
+
+.root:global(.color_paper3) {
+    background-color: var(--color-background-paper-level-3);
+}
+
+@include xs {
+    .root {
+        &__fullMobileWidth {
+            border-radius: 0;
+            border-right: none;
+            border-left: none;
+        }
+    }
+}

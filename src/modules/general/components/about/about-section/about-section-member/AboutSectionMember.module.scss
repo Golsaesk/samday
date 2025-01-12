@@ -1,0 +1,88 @@
+@import "@styles/scss/partials/variables";
+@import "@styles/scss/partials/mixins";
+
+.root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-normal);
+    text-align: center;
+
+    &__image {
+        width: 106px;
+        height: 106px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: var(--border-radius-small);
+        outline: 1px solid var(--color-border-2);
+
+        img {
+            max-width: 100%;
+            width: auto;
+            height: auto;
+            max-height: 100%;
+            border-radius: var(--border-radius-small);
+        }
+    }
+
+    &__label {
+        width: fit-content;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: var(--border-radius-small);
+        background-color: var(--color-primary-main);
+        padding: 0 var(--spacing-large);
+        font-size: var(--font-size-button2);
+        font-weight: var(--font-weight-button2);
+        color: var(--color-gray-level-0);
+
+        &__green {
+            background-color: var(--color-secondary-main);
+        }
+    }
+
+    &__title {
+        font-size: var(--font-size-button2);
+        font-weight: var(--font-weight-button2);
+        line-height: var(--line-height-button2);
+        color: var(--color-text-primary-minus-1);
+    }
+
+    &__link {
+        @include font("body2");
+    }
+
+    &__subTitle {
+        @include font("tiny");
+        color: var(--color-text-primary-minus-1);
+    }
+}
+
+@include xs {
+    .root {
+        &__label {
+            font-size: var(--font-size-tiny);
+            font-weight: var(--font-weight-tiny);
+        }
+
+        &__title {
+            font-size: var(--font-size-tiny);
+            font-weight: var(--font-weight-tiny);
+            line-height: var(--line-height-tiny);
+        }
+    }
+}
+
+[dir="ltr"] {
+    .root {
+        &__label {
+            padding: 0 var(--spacing-normal);
+            font-size: var(--font-size-tiny);
+            font-weight: var(--font-weight-tiny);
+        }
+    }
+}

@@ -1,0 +1,380 @@
+:root {
+
+  /* Base Tokens - Color - Gray */
+
+  --gray-tone1-10: #FBFBFB;
+  --gray-tone1-50: #F7F7F7;
+  --gray-tone1-100: #EBEBEB;
+  --gray-tone1-200: #DDDDDD;
+  --gray-tone1-300: #C2C2C2;
+  --gray-tone1-400: #A5A5A5;
+  --gray-tone1-500: #717171;
+  --gray-tone1-600: #606060;
+  --gray-tone1-700: #4B4B4B;
+  --gray-tone1-800: #313131;
+  --gray-tone1-900: #222222;
+
+
+  /* --------------------------------------------------------------------- */
+
+  /* Base Tokens - Color - Purple */
+
+  --purple-tone1-10: #EEF1FD;
+  --purple-tone1-50: #D6DBF4;
+  --purple-tone1-100: #A9B4E8;
+  --purple-tone1-200: #8495DF;
+  --purple-tone1-300: #6075D5;
+  --purple-tone1-400: #3B55CC;
+  --purple-tone1-500: #2D44AC;
+  --purple-tone1-600: #25388D;
+  --purple-tone1-700: #1B2968;
+  --purple-tone1-800: #121B44;
+  --purple-tone1-900: #080C20;
+
+  /* --------------------------------------------------------------------- */
+
+  /* Base Tokens - Color - Red */
+
+  --red-tone1-10: #FFF2F3;
+  --red-tone1-50: #F7CBCC;
+  --red-tone1-100: #F5B9BB;
+  --red-tone1-200: #F1A2A5;
+  --red-tone1-300: #EC8387;
+  --red-tone1-400: #E65A5F;
+  --red-tone1-500: #DE2328;
+  --red-tone1-600: #BE1D22;
+  --red-tone1-700: #A1181D;
+  --red-tone1-800: #891518;
+  --red-tone1-900: #751215;
+
+  /* --------------------------------------------------------------------- */
+
+  /* Base Tokens - Color - Yellow */
+
+  --yellow-tone1-10: #FFFBF0;
+  --yellow-tone1-50: #FFECBE;
+  --yellow-tone1-100: #FFE6A8;
+  --yellow-tone1-200: #FFDE8B;
+  --yellow-tone1-300: #FFD364;
+  --yellow-tone1-400: #FFC430;
+  --yellow-tone1-500: #EAA700;
+  --yellow-tone1-600: #C78F00;
+  --yellow-tone1-700: #A97900;
+  --yellow-tone1-800: #906700;
+  --yellow-tone1-900: #7A5800;
+
+  /* --------------------------------------------------------------------- */
+
+  /* Base Tokens - Color - Blue */
+
+  --blue-tone1-10: #f3f6ff;
+  --blue-tone1-50: #D0D8F7;
+  --blue-tone1-100: #C0CBF4;
+  --blue-tone1-200: #ABBAF1;
+  --blue-tone1-300: #8EA3EC;
+  --blue-tone1-400: #6984E5;
+  --blue-tone1-500: #375CDD;
+  --blue-tone1-600: #2246C8;
+  --blue-tone1-700: #1D3CAA;
+  --blue-tone1-800: #193391;
+  --blue-tone1-900: #152B7B;
+
+  /* Base Tokens - Color - Green */
+
+  --green-tone1-10: #F9FFFC;
+  --green-tone1-50: #D6F3E5;
+  --green-tone1-100: #B2F2D3;
+  --green-tone1-200: #98EEC5;
+  --green-tone1-300: #76E9B1;
+  --green-tone1-400: #49E197;
+  --green-tone1-500: #20C375;
+  --green-tone1-600: #1BA663;
+  --green-tone1-700: #178D54;
+  --green-tone1-800: #147847;
+  --green-tone1-900: #11663D;
+
+  --green-tone2-10: #E7FFF8;
+  --green-tone2-50: #BAFCE9;
+  --green-tone2-100: #84F9D8;
+  --green-tone2-200: #58F7CB;
+  --green-tone2-300: #2CF5BD;
+  --green-tone2-400: #0BE8AA;
+  --green-tone2-500: #09BC8A;
+  --green-tone2-600: #08a176;
+  --green-tone2-700: #067556;
+  --green-tone2-800: #04503A;
+  --green-tone2-900: #02241A;
+
+  /* --------------------------------------------------------------------- */
+
+
+  /* Base Tokens - Color - Common */
+
+  --white: #FFFFFF;
+  --black: #000000;
+  --red: #FF0000;
+  --green: #00FF00;
+  --blue: #0000FF;
+  --yellow: #FFFF00;
+  --white-opacity-30: #ffffff4d;
+  --black-opacity-30: #00000080;
+
+  /* --------------------------------------------------------------------- */
+
+  /* Base Tokens - Point */
+
+  --point-0: 0;
+  --point-1: 1;
+  --point-2: 2;
+  --point-3: 3;
+  --point-4: 4;
+  --point-5: 5;
+  --point-6: 6;
+  --point-7: 7;
+  --point-8: 8;
+  --point-9: 9;
+  --point-10: 10;
+  --point-11: 11;
+  --point-12: 12;
+  --point-13: 13;
+  --point-14: 14;
+  --point-15: 15;
+  --point-16: 16;
+  --point-17: 17;
+  --point-18: 18;
+  --point-19: 19;
+  --point-20: 20;
+  --point-21: 21;
+  --point-22: 22;
+  --point-23: 23;
+  --point-24: 24;
+  --point-25: 25;
+  --point-26: 26;
+  --point-27: 27;
+  --point-28: 28;
+  --point-29: 29;
+  --point-30: 30;
+  --point-31: 31;
+  --point-32: 32;
+  --point-33: 33;
+  --point-34: 34;
+  --point-35: 35;
+  --point-36: 36;
+  --point-37: 37;
+  --point-38: 38;
+  --point-39: 39;
+  --point-40: 40;
+  --point-41: 41;
+  --point-42: 42;
+  --point-43: 43;
+  --point-44: 44;
+  --point-45: 45;
+  --point-46: 46;
+  --point-47: 47;
+  --point-48: 48;
+  --point-49: 49;
+  --point-50: 50;
+
+  /* --------------------------------------------------------------------- */
+
+  /* Base Tokens - zIndex */
+
+  --z-index-minus-100: -100;
+  --z-index-minus-50: -50;
+  --z-index-minus-20: -20;
+  --z-index-minus-10: -10;
+  --z-index-0: 0;
+  --z-index-1: 1;
+  --z-index-2: 2;
+  --z-index-3: 3;
+  --z-index-4: 4;
+  --z-index-5: 5;
+  --z-index-6: 6;
+  --z-index-7: 7;
+  --z-index-8: 8;
+  --z-index-9: 9;
+  --z-index-10: 10;
+  --z-index-20: 20;
+  --z-index-30: 30;
+  --z-index-40: 40;
+  --z-index-50: 50;
+  --z-index-60: 60;
+  --z-index-70: 70;
+  --z-index-80: 80;
+  --z-index-90: 90;
+  --z-index-100: 100;
+
+  /* --------------------------------------------------------------------- */
+
+  /* Base Tokens - Time */
+  --time-10: 10;
+  --time-100: 100;
+  --time-200: 200;
+  --time-300: 300;
+  --time-400: 400;
+  --time-500: 500;
+  --time-600: 600;
+  --time-700: 700;
+  --time-800: 800;
+  --time-900: 900;
+  --time-1000: 1000;
+  --time-2000: 2000;
+
+  /* --------------------------------------------------------------------- */
+
+  /* Base Tokens - Size */
+  --size-0: 0;
+  --size-10: 1;
+  --size-20: 2;
+  --size-25: 3;
+  --size-30: 4;
+  --size-35: 5;
+  --size-40: 6;
+  --size-45: 7;
+  --size-50: 8;
+  --size-55: 9;
+  --size-60: 10;
+  --size-70: 11;
+  --size-75: 12;
+  --size-80: 13;
+  --size-90: 14;
+  --size-100: 16;
+  --size-110: 18;
+  --size-120: 20;
+  --size-140: 22;
+  --size-150: 24;
+  --size-170: 26;
+  --size-180: 28;
+  --size-190: 30;
+  --size-200: 30;
+
+  /* --------------------------------------------------------------------- */
+
+  /* Base Tokens - Font */
+
+  --font-name-main: "iransansx";
+  --font-name-alternate: "tahoma";
+  --font-size-base: 16;
+
+  /* --------------------------------------------------------------------- */
+
+  /* Base Tokens - Rem Size */
+
+  --rem-size-1: 0.625;
+  /*10px*/
+  --rem-size-2: 0.75;
+  /*12px*/
+  --rem-size-3: 0.8125;
+  /*13px*/
+  --rem-size-4: 0.875;
+  /*14px*/
+  --rem-size-5: 1;
+  /*16px*/
+  --rem-size-6: 1.125;
+  /*18px*/
+  --rem-size-7: 1.25;
+  /*20px*/
+  --rem-size-8: 1.375;
+  /*22px*/
+  --rem-size-9: 1.5;
+  /*24px*/
+  --rem-size-10: 1.625;
+  /*26px*/
+  --rem-size-11: 1.75;
+  /*28px*/
+  --rem-size-12: 2;
+  /*32px*/
+  --rem-size-13: 2.125;
+  /*34px*/
+  --rem-size-14: 2.375;
+  /*38px*/
+  --rem-size-15: 2.5;
+  /*40px*/
+
+  /* --------------------------------------------------------------------- */
+
+
+  /* Base Tokens - Font - Weight */
+
+  --font-weight-100: 100;
+  --font-weight-200: 200;
+  --font-weight-300: 300;
+  --font-weight-400: 400;
+  --font-weight-500: 500;
+  --font-weight-600: 600;
+  --font-weight-700: 700;
+  --font-weight-800: 800;
+  --font-weight-900: 900;
+
+  /* --------------------------------------------------------------------- */
+
+
+  /* Base Tokens - Screen - Size */
+
+  --max-width: 1224;
+  --screen-xs-start: 0;
+  --screen-sm-start: 600;
+  --screen-md-start: 900;
+  --screen-lg-start: 1200;
+  --screen-xl-start: 1536;
+
+  /* --------------------------------------------------------------------- */
+
+  /* Base Tokens - Shadow */
+
+  --shadow-tone1-100: 0px 2px 8px 0px rgba(0, 0, 0, 0.06);
+  --shadow-tone1-200: 0px 2px 6px 0px rgba(0, 0, 0, 0.06);
+  --shadow-tone1-300: 1px 2px 8px 0px rgba(0, 0, 0, 0.14);
+  --shadow-tone1-400: 0px 2px 4px 1px rgba(0, 0, 0, 0.14);
+  --shadow-tone1-500: 0px 2px 8px 0px rgba(0, 0, 0, 0.06);
+  --shadow-tone1-600: 0px -2px 8px 0px rgba(0, 0, 0, 0.06);
+  --shadow-tone1-700: 9px 0px 24px 0px rgba(0, 0, 0, 0.16);
+  --shadow-tone1-800: 0px 0px 16px 0px rgba(0, 0, 0, 0.25);
+
+  --shadow-tone2-100: 0px 2px 8px 0px rgba(0, 0, 0, 0.06);
+  --shadow-tone2-200: 0px 2px 6px 0px rgba(0, 0, 0, 0.12);
+  --shadow-tone2-300: 1px 2px 8px 0px rgba(0, 0, 0, 0.14);
+  --shadow-tone2-400: 0px 2px 4px 1px rgba(0, 0, 0, 0.30);
+  --shadow-tone2-500: 0px 2px 8px 0px rgba(0, 0, 0, 0.16);
+  --shadow-tone2-600: 0px -2px 8px 0px rgba(0, 0, 0, 0.16);
+  --shadow-tone2-700: 9px 0px 24px 0px rgba(0, 0, 0, 0.16);
+  --shadow-tone2-800: 0px 0px 16px 0px rgba(0, 0, 0, 0.25);
+
+  --shadow-inset-tone1: inset 0px 5px 6px -1px rgb(238 238 238);
+  --shadow-inset-tone2: inset 0px 5px 6px -1px rgb(8 8 8 / 49%);
+
+  /* --------------------------------------------------------------------- */
+
+
+  --max-container-size: 1224px;
+  --max-dashboard-container-size: 1520px;
+  --max-dashboard-section-container-size: 1380px;
+
+  --error-water-mark: #fff2f363;
+  --filter-grayscale: grayscale(40%);
+  --filter-brightness-1: brightness(85%);
+  --filter-brightness-2: brightness(55%);
+
+  --color-gray-opaque-level-1: rgba(0, 0, 0, 0.3);
+  --color-gray-opaque-level-2: rgba(0, 0, 0, 0.5);
+  --color-gray-opaque-level-3: rgba(0, 0, 0, 0.7);
+
+  --spacing-gap: var(--spacing-xx-large);
+  --spacing-panel: var(--spacing-xx-large);
+  --spacing-card: var(--spacing-xxx-large);
+}
+
+@media screen and (max-width:899px) {
+  :root {
+    --spacing-gap: var(--spacing-x-large);
+    --spacing-panel: var(--spacing-x-large);
+    --spacing-card: var(--spacing-xx-large);
+  }
+}
+
+@media screen and (max-width:599px) {
+  :root {
+    --spacing-gap: var(--spacing-large);
+    --spacing-card: var(--spacing-x-large);
+  }
+}

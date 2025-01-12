@@ -1,0 +1,139 @@
+@import "@styles/scss/partials/variables";
+@import "@styles/scss/partials/mixins";
+
+.root {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    &__autocomplete {
+        margin-top: 0 !important;
+        position: relative;
+        fieldset {
+            border-color: var(--color-gray-level-200);
+        }
+        &__input {
+            height: 32px;
+            padding-top: 0;
+            padding-bottom: 0;
+            font-size: var(--font-size-overline);
+            &::selection {
+                background-color: var(--color-background-paper-level-1);
+            }
+        }
+        &__inputRoot {
+            height: 56px;
+        }
+
+        &__icon {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+        }
+        &__clearIndicator {
+            svg {
+                width: 20px;
+                fill: var(--color-gray-level-600);
+            }
+        }
+        &__noOptions {
+            background-color: var(--color-gray-level-50);
+            p {
+                font-size: var(--font-size-caption);
+            }
+        }
+        &__popper {
+            box-shadow: 0 3px 6px var(--color-gray-level-100);
+            background-color: var(--color-background-paper-level-1);
+            ::-webkit-scrollbar {
+                width: 10px;
+            }
+
+            ::-webkit-scrollbar-track {
+                border-radius: 20px;
+            }
+
+            ::-webkit-scrollbar-thumb {
+                background: var(--color-gray-level-300);
+                border-radius: 20px;
+            }
+
+            ::-webkit-scrollbar-thumb:hover {
+                background: var(--color-gray-level-100);
+            }
+        }
+
+        &__listbox {
+            background-color: var(--color-background-paper-level-1);
+            font-size: var(--font-size-overline);
+        }
+        &_error {
+            input {
+                border-color: var(--color-error-minus-1);
+                background: var(--color-error-minus-1);
+            }
+        }
+
+        &:before {
+            display: none;
+        }
+
+        &:after {
+            display: none;
+        }
+
+        &__endAdornment {
+            display: flex;
+        }
+    }
+
+    &__helperText {
+        font-weight: var(--font-weight-regular);
+        font-size: var(--font-size-small);
+        line-height: var(--line-height-small);
+        text-align: right;
+        color: var(--color-gray-level-700);
+        margin: 0;
+
+        > span {
+            margin-bottom: var(--spacing-normal);
+        }
+    }
+
+    &__error {
+        font-weight: var(--font-weight-medium);
+        font-size: var(--font-size-small);
+        line-height: var(--line-height-small);
+        text-align: right;
+        margin-top: 0;
+        display: flex;
+        align-items: center;
+
+        svg {
+            width: 12px;
+            margin-left: var(--spacing-normal);
+        }
+    }
+
+    &__rule {
+        color: var(--color-gray-level-700);
+        font-weight: var(--font-weight-medium);
+        font-size: var(--font-size-small);
+        line-height: var(--line-height-small);
+        clear: both;
+        width: 100%;
+        display: table;
+    }
+}
+
+@include xs {
+    .root {
+        width: 100%;
+
+        &__input {
+            input {
+                width: 100%;
+            }
+        }
+    }
+}

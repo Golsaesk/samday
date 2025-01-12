@@ -1,0 +1,58 @@
+@import "@styles/scss/partials/mixins";
+@import "@styles/scss/partials/variables";
+
+.root {
+    max-width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-x-small);
+    border-radius: var(--border-radius-xx-large);
+    border: 1px solid var(--color-gray-level-200);
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    input[type=number] {
+        -moz-appearance: textfield;
+        text-align: center;
+    }
+
+    &__vertical {
+        flex-direction: column;
+        height: 120px;
+        width: 40px;
+    }
+
+    &__horizontal {
+        width: 120px;
+        height: 40px;
+    }
+
+    &__icon {
+        min-width: 32px;
+        height: 32px;
+        display: flex;
+        justify-content: center;
+
+        align-items: center;
+        border-radius: 50%;
+        cursor: pointer;
+        background-color: var(--color-primary-minus-4);
+
+        svg {
+            fill: var(--color-primary-plus-1); 
+        }
+    }
+
+    &__disable {
+        cursor: auto;
+
+        svg {
+            fill: var(--color-primary-minus-2) !important;
+        }
+    }
+}

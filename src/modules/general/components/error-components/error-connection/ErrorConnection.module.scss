@@ -1,0 +1,64 @@
+@import "@styles/scss/partials/mixins";
+@import "@styles/scss/partials/variables";
+
+.root {
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: var(--spacing-xx-large);
+    max-width: 580px;
+    width: 100%;
+    height: auto;
+    padding: var(--spacing-xxx-large);
+    max-height: 100vh;
+
+    &__content {
+        display: flex;
+        gap: var(--spacing-large);
+        flex-direction: column;
+
+        button {
+            margin-top: var(--spacing-normal);
+            max-width: 140px;
+            white-space: nowrap;
+        }
+        a {
+            margin-top: var(--spacing-normal);
+            max-width: 140px;
+            white-space: nowrap;
+        }
+    }
+}
+
+.root:global(.variant_card) {
+    background-color: var(--color-background-paper-level-1);
+    border-radius: var(--border-radius-large);
+    border: 1px solid var(--color-gray-level-100);
+    box-shadow: var(--shadow-alert);
+}
+
+@include xs {
+    .root {
+        flex-direction: column;
+        align-items: center;
+        max-width: 300px;
+        gap: var(--spacing-x-large);
+        min-height: 300px;
+
+        img {
+            max-width: 100px;
+            height: auto;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        &__content {
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

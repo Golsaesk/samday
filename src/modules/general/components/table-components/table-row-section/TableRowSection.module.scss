@@ -1,0 +1,65 @@
+@import "@styles/scss/partials/mixins";
+@import "@styles/scss/partials/variables";
+
+.root {
+    display: flex;
+    width: 100%;
+}
+
+.root:global(.variant_tools) {
+    display: contents;
+
+    > div {
+        height: auto;
+    }
+}
+
+@include down(1300px) {
+    .root {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .root:global(.variant_tools) {
+        width: auto;
+        display: flex;
+        justify-content: center;
+        gap: var(--spacing-large);
+
+        > div {
+            height: auto;
+            div {
+                border: none;
+            }
+        }
+    }
+}
+
+@include xs {
+    .root {
+        gap: var(--spacing-normal);
+    }
+
+    .root:global(.variant_tools) {
+        flex-direction: row;
+        gap: var(--spacing-normal);
+        justify-content: space-between;
+        border-top: 1px solid var(--color-gray-level-100);
+        padding-top: var(--spacing-x-large);
+
+        div {
+            gap: 0;
+        }
+        a {
+            padding-right: var(--spacing-x-small);
+        }
+    }
+}
+
+@include down(450px) {
+    .root:global(.variant_tools) {
+        div {
+            white-space: wrap;
+        }
+    }
+}

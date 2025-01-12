@@ -1,0 +1,39 @@
+@import "@styles/scss/partials/mixins";
+@import "@styles/scss/partials/variables";
+
+.root {
+    padding: var(--spacing-xx-large) var(--spacing-xx-large) 0;
+    max-width: var(--max-container-size);
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: var(--spacing-xx-small);
+    align-items: center;
+
+    svg {
+        fill: var(--color-gray-level-400);
+        width: 20px;
+        height: 20px;
+    }
+
+    a {
+        font-size: var(--font-size-button2);
+        font-weight: var(--font-weight-button2);
+        line-height: var(--line-height-button2);
+        color: var(--color-gray-level-600);
+        cursor: pointer;
+        transition: color 0.3s ease-in-out 0s;
+
+        &:hover {
+            color: var(--color-primary-main);
+        }
+    }
+}
+
+@include xs {
+    .root {
+        padding: var(--spacing-x-large) var(--spacing-x-large) 0;
+    }
+}

@@ -1,0 +1,78 @@
+@import "@styles/scss/partials/mixins";
+@import "@styles/scss/partials/variables";
+
+.root {
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing-large) var(--spacing-xx-small);
+
+    &__border {
+        border-bottom: 1px solid var(--color-gray-level-200);
+    }
+    &__header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+
+        &__text {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-normal);
+            &__badge {
+                min-width: 3px;
+                min-height: 3px;
+                padding: var(--spacing-xx-small);
+                border-radius: 100%;
+                background-color: var(--color-primary-main);
+                color: var(--color-gray-level-0);
+                font-size: 11px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                &__count {
+                    width: 18px;
+                    height: 18px;
+                    padding-left: 3px;
+                    padding-top: 3px;
+                }
+            }
+        }
+        svg {
+            width: 20px;
+            height: 20px;
+            transition: transform 0.3s ease-in-out 0s;
+            path {
+                fill: var(--color-gray-level-600);
+            }
+        }
+        &__collapsed {
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+    }
+    &__collapse {
+        padding: var(--spacing-x-large) 0 var(--spacing-x-small);
+        &__container {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-large);
+        }
+    }
+}
+
+@include down($screen-sm-end) {
+    .root {
+        padding: var(--spacing-large) 0;
+        margin: 0 var(--spacing-xx-large);
+        max-width: calc(100% - 48px);
+    }
+}
+
+@include xs {
+    .root {
+        padding: var(--spacing-x-large) 0;
+    }
+}

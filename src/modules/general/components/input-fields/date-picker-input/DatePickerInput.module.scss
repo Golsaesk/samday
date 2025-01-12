@@ -1,0 +1,124 @@
+@import "@styles/scss/partials/mixins";
+@import "@styles/scss/partials/variables";
+
+.root {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xx-small);
+    position: relative;
+
+    &__clear {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 24px;
+        height: 24px;
+        top: var(--spacing-large);
+        left: 48px;
+        z-index: 10;
+        cursor: pointer;
+
+        svg {
+            width: 18px;
+            height: 18px;
+            fill: var(--color-gray-level-500);
+            transition: fill 0.3s ease-in-out 0s;
+        }
+
+        &:hover {
+            svg {
+                fill: var(--color-gray-level-900);
+            }
+        }
+    }
+
+    &__datePicker {
+        input {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            pointer-events: none;
+            font-size: var(--font-size-caption) !important;
+            color: var(--color-gray-level-700) !important;
+
+            &::-moz-selection {
+                /* Code for Firefox */
+                color: unset !important;
+                background: #22222200;
+            }
+
+            &::selection {
+                color: unset !important;
+                background: #22222200;
+            }
+
+            cursor: default;
+        }
+
+        button {
+            font-feature-settings: "ss03" !important;
+            font-variation-settings: "FANU" 1 !important;
+            border-radius: 0 !important;
+            border-right: 1px solid var(--color-gray-level-300);
+        }
+
+        div:global(.MuiInputBase-root) {
+            height: 48px;
+        }
+
+        label {
+            line-height: 20px;
+            transform: translate(-14px, 10px) scale(1);
+        }
+
+        label:global(.Mui-focused),
+        label:global(.MuiInputLabel-shrink) {
+            transform: translate(-14px, -9px) scale(0.75);
+        }
+
+        label {
+            font-size: var(--font-size-caption);
+        }
+
+        &__button {
+            min-width: unset !important;
+            padding: 0 !important;
+            border-right: 1px solid var(--color-gray-level-300);
+            padding-right: var(--spacing-normal) !important;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            height: auto !important;
+            background-color: transparent;
+
+            svg {
+                width: 24px;
+                height: 24px;
+
+                path {
+                    fill: var(--color-gray-level-600) !important;
+                }
+            }
+            &:hover {
+                background-color: transparent !important;
+
+                svg {
+                    path {
+                        fill: var(--color-primary-main) !important;
+                    }
+                }
+            }
+        }
+
+        &__error {
+            padding-right: var(--spacing-normal);
+            color: var(--color-error-main) !important;
+            margin-bottom: var(--spacing-xx-small);
+        }
+    }
+}
+
+.fullWidth {
+    width: 100%;
+}

@@ -1,0 +1,70 @@
+@import "@styles/scss/partials/variables";
+@import "@styles/scss/partials/mixins";
+
+.root {
+    width: 100%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: calc(var(--spacing-xx-large) * 2);
+    padding-bottom: calc(var(--spacing-xx-large) * 2);
+    overflow: hidden;
+    &__title {
+        color: var(--color-text-primary-minus-1) !important;
+    }
+
+    &__swiper {
+        position: static;
+        max-width: var(--max-dashboard-container-size);
+        padding-top: var(--spacing-large);
+
+        &__slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        width: 144px;
+        height: 100%;
+        top: 0;
+        left: -1px;
+        background: linear-gradient(90deg, rgb(255, 255, 255) 20%, rgba(255, 255, 255, 0) 100%);
+        z-index: 10;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 144px;
+        height: 100%;
+        top: 0;
+        right: 0;
+        background: linear-gradient(-90deg, rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 0) 100%);
+        z-index: 10;
+    }
+}
+
+@include xs {
+    .root {
+        padding-bottom: var(--spacing-xxx-large);
+
+        &__title {
+            font-size: var(--font-size-h5) !important;
+            font-weight: var(--font-weight-h5) !important;
+            line-height: var(--line-height-h5) !important;
+        }
+
+        &::before {
+            width: 64px;
+        }
+
+        &::after {
+            width: 64px;
+        }
+    }
+}

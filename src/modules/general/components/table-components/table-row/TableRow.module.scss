@@ -1,0 +1,24 @@
+@import "@styles/scss/partials/mixins";
+@import "@styles/scss/partials/variables";
+
+.root {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+@include down(1300px) {
+    .root {
+        padding: var(--spacing-x-large) var(--spacing-xx-large);
+    }
+}
+
+@include xs {
+    .root {
+        flex-direction: column;
+        padding: var(--spacing-x-large);
+        gap: var(--spacing-large);
+    }
+}

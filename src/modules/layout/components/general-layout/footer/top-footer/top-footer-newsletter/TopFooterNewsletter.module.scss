@@ -1,0 +1,101 @@
+@import "@styles/scss/partials/variables";
+@import "@styles/scss/partials/mixins";
+
+.root {
+    width: 100%;
+    min-height: 56px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-large);
+    border-radius: var(--border-radius-large);
+    background-color: var(--color-primary-minus-2);
+    gap: var(--spacing-large);
+
+    &__description {
+        width: auto;
+        max-width: 60%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: var(--spacing-normal);
+
+        svg {
+            margin-top: var(--spacing-x-small);
+        }
+    }
+
+    &__form {
+        width: auto;
+        flex: 1;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-end;
+        gap: var(--spacing-large);
+
+        &__input {
+            width: auto;
+            max-width: 300px;
+            flex: 1;
+        }
+
+        &__captcha {
+            width: 200px;
+        }
+
+        &__button {
+
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
+
+@include md {
+    .root {
+        &__description {
+            max-width: 50%;
+        }
+    }
+}
+
+@include down(1000px) {
+    .root {
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+
+        &__description {
+            max-width: 100%;
+        }
+
+        &__form {
+            width: 100%;
+
+            &__input {
+                max-width: unset;
+            }
+        }
+    }
+}
+
+@include xs {
+    .root {
+        display: none;
+    }
+}
+
+[dir="ltr"] {
+    .root {
+
+        &__form {
+            &__button {
+                svg {
+                    transform: unset;
+                }
+            }
+        }
+    }
+}

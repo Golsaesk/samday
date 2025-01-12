@@ -1,0 +1,27 @@
+$font-family: "iransansx";
+$screen-xs-start: 0;
+$screen-sm-start: 600px;
+$screen-md-start: 900px;
+$screen-lg-start: 1200px;
+$screen-xl-start: 1536px;
+
+$screen-xs-end: $screen-sm-start - 1px;
+$screen-sm-end: $screen-md-start - 1px;
+$screen-md-end: $screen-lg-start - 1px;
+$screen-lg-end: $screen-xl-start - 1px;
+$screen-xl-end: 2000px;
+
+:export {
+    font-family: $font-family;
+    screen-xs-start: $screen-xs-start;
+    screen-sm-start: $screen-sm-start;
+    screen-md-start: $screen-md-start;
+    screen-lg-start: $screen-lg-start;
+    screen-xl-start: $screen-xl-start;
+    screen-xs-end: $screen-xs-end;
+    screen-sm-end: $screen-sm-end;
+    screen-md-end: $screen-md-end;
+    screen-lg-end: $screen-lg-end;
+    screen-xl-end: $screen-xl-end;
+    screen-xl-end: $screen-xl-end;
+}

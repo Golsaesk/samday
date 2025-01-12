@@ -1,0 +1,49 @@
+@import "@styles/scss/partials/variables";
+@import "@styles/scss/partials/mixins";
+
+.root {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-background-default);
+
+    &__panel {
+        width: 100%;
+        flex-direction: row !important;
+        gap: var(--spacing-xx-large);
+        padding-top: var(--spacing-xxx-large);
+        padding-bottom: var(--spacing-xxx-large);
+
+        &__filter {
+            width: fit-content;
+            max-width: 350px;
+        }
+
+        &__content {
+            flex: 1;
+        }
+    }
+}
+
+@include down(750px) {
+    .root {
+        &__panel {
+            flex-direction: column !important;
+            gap: var(--spacing-x-large);
+            padding-top: 0;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+
+            &__filter {
+                width: 100%;
+            }
+
+            &__content {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,53 @@
+@import "@styles/scss/partials/mixins";
+@import "@styles/scss/partials/variables";
+
+.root {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-background-default);
+    margin-top: 56px;
+
+    &__container {
+        width: 100%;
+        flex-direction: row !important;
+        align-items: center;
+        height: 40px;
+
+        &__home {
+            font-size: var(--font-size-subtitle2);
+            font-weight: var(--font-weight-subtitle2);
+            color: var(--color-text-primary-disabled);
+        }
+
+        &__divider {
+            font-size: var(--font-size-subtitle2);
+            font-weight: var(--font-weight-subtitle2);
+            padding: 0 var(--spacing-small);
+            color: var(--color-text-primary-disabled);
+        }
+
+        &__link {
+            font-size: var(--font-size-subtitle2);
+            font-weight: var(--font-weight-subtitle2);
+            color: var(--color-text-primary-minus-1);
+        }
+    }
+
+    a {
+        transition: color 0.3s ease-in-out 0s;
+
+        &:hover {
+            color: var(--color-primary-main);
+        }
+    }
+}
+
+@include down(750px) {
+    .root {
+        display: none;
+    }
+}

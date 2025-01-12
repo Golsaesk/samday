@@ -1,0 +1,88 @@
+@import "@styles/scss/partials/mixins";
+@import "@styles/scss/partials/variables";
+
+.root {
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing-xx-large) var(--spacing-large);
+    border: 1px solid var(--color-border-3);
+    border-radius: var(--border-radius-large);
+
+    &__active {
+        border-color: var(--color-success-main);
+        background-color: var(--color-success-minus-4);
+    }
+
+    &__header {
+        font-size: var(--font-size-h4);
+        padding: 0 var(--spacing-normal) var(--spacing-x-large);
+        font-weight: var(--font-weight-h4);
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        border-bottom: 1px solid #dddddd00;
+        position: relative;
+        transition: border-color 0.3s ease-in-out 0s;
+
+        &__open {
+            border-color: var(--color-gray-level-200);
+        }
+
+        &__icon {
+            width: 24px;
+            height: 24px;
+            border-radius: 100%;
+            border: 1px solid var(--color-gray-level-400);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+
+            &__checked {
+                border-color: var(--color-success-main);
+                background-color: var(--color-success-main);
+                svg {
+                    transition: all 0.3s ease-in-out 0s;
+                    width: 18px;
+                    height: 18px;
+                    fill: var(--color-gray-level-0);
+                }
+            }
+        }
+
+        &__collapse {
+            width: 24px;
+            height: 24px;
+            svg {
+                display: none;
+            }
+        }
+    }
+
+    &__footer {
+        padding-top: var(--spacing-x-large);
+        border-top: 1px solid var(--color-gray-level-200);
+    }
+}
+
+@include xs {
+    .root {
+        &__header {
+            &__collapse {
+                cursor: pointer;
+
+                svg {
+                    display: block;
+                    fill: var(--color-gray-level-600);
+                    transition: transform 0.3s ease-in-out 0s;
+                }
+
+                &__open {
+                    svg {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+        }
+    }
+}

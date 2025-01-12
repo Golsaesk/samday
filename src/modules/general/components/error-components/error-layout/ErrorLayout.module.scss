@@ -1,0 +1,23 @@
+@import "@styles/scss/partials/mixins";
+@import "@styles/scss/partials/variables";
+
+.root {
+    position: fixed;
+    width: 100%;
+    left: -1px;
+    right: -1px;
+    top: 60px;
+    bottom: -1px;
+    background: var(--color-background-popup-error);
+    backdrop-filter: blur(9.5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 100vh;
+}
+
+@include xs {
+    .root {
+        top: 101px;
+    }
+}

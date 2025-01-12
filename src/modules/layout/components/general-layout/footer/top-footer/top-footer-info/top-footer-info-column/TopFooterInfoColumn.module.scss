@@ -1,0 +1,87 @@
+@import "@styles/scss/partials/variables";
+@import "@styles/scss/partials/mixins";
+
+.root {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--spacing-x-large);
+    position: relative;
+    padding-right: var(--spacing-xx-large);
+
+    &::before {
+        position: absolute;
+        content: "";
+        right: 0;
+        width: 2px;
+        height: 100%;
+        background-color: var(--color-primary-minus-2);
+    }
+
+    &__title {
+        width: 100%;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        color: var(--color-text-primary-minus-1);
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: "";
+            right: -24px;
+            width: 2px;
+            height: 100%;
+            background-color: var(--color-primary-main);
+        }
+    }
+
+    p {
+        color: var(--color-text-primary-minus-1);
+    }
+
+    &__link {
+        color: var(--color-text-primary-minus-1);
+        direction: ltr;
+        text-align: right;
+        font-size: var(--font-size-subtitle2);
+        font-weight: var(--font-weight-subtitle2);
+        line-height: var(--line-height-subtitle2);
+
+        &:hover {
+            color: var(--color-primary-main);
+        }
+    }
+
+    &__item {
+        max-width: 300px;
+    }
+}
+
+[dir="ltr"] {
+    .root {
+        padding-left: var(--spacing-xx-large);
+        padding-right: 0;
+        font-feature-settings: normal;
+
+        &::before {
+            left: 0;
+            right: unset;
+        }
+
+        &__title {
+            &::before {
+                left: -24px;
+                right: unset;
+            }
+        }
+
+        &__link {
+            font-feature-settings: normal;
+            text-align: left;
+        }
+    }
+}

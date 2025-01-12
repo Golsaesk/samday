@@ -1,0 +1,56 @@
+@import "@styles/scss/partials/variables";
+@import "@styles/scss/partials/mixins";
+
+.root {
+    text-align: left;
+    font-size: var(--font-size-button2) !important;
+    font-weight: var(--font-weight-button2) !important;
+    line-height: var(--line-height-button2) !important;
+    border-radius: var(--border-radius-small) !important;
+    width: fit-content;
+    height: 36px !important;
+    padding: var(--spacing-normal) var(--spacing-large) !important;
+
+    &:disabled {
+        transition: none !important;
+    }
+
+    &__outlined {
+        text-align: left;
+    }
+}
+
+.loadingIndicator {
+    position: relative !important;
+    display: flex !important;
+    margin-left: -4px;
+    left: 0;
+    right: 0;
+
+    &__root {
+        span {
+            width: 20px !important;
+            height: 20px !important;
+
+            svg {
+                padding: 2px;
+                color: var(--color-button-text-disabled);
+            }
+        }
+    }
+}
+
+@include down($screen-sm-end) {
+    .root {
+        &__hideOnSmallDevice {
+            > span:global(.title) {
+                display: none;
+            }
+        }
+    }
+
+    .loadingIndicator {
+        margin-left: 0;
+        right: 0;
+    }
+}

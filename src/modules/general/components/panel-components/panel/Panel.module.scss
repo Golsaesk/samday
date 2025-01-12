@@ -1,0 +1,35 @@
+@import "@styles/scss/partials/mixins";
+@import "@styles/scss/partials/variables";
+
+.root {
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: var(--max-container-size);
+    padding-left: var(--spacing-xx-large);
+    padding-right: var(--spacing-xx-large);
+}
+
+.general {
+    max-width: var(--max-container-size);
+}
+
+.dashboard {
+    max-width: var(--max-dashboard-container-size);
+}
+
+.dashboardSection {
+    max-width: var(--max-dashboard-section-container-size);
+}
+.fullWidth {
+    max-width: 100%;
+    padding: 0;
+}
+
+@include xs {
+    .root {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}

@@ -1,0 +1,100 @@
+@import "@styles/scss/partials/mixins";
+@import "@styles/scss/partials/variables";
+
+.root {
+    &__swiper {
+        width: 100%;
+        display: flex;
+        justify-items: center;
+        align-content: center;
+        border-radius: var(--border-radius-large);
+    }
+
+    &__prev,
+    &__next {
+        position: absolute;
+        top: calc(50% - 10px);
+        min-width: 20px;
+        min-height: 20px;
+        max-width: 20px;
+        max-height: 20px;
+        border-radius: var(--border-radius-x-small);
+        box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.12);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--color-primary-main);
+        z-index: 100;
+        cursor: pointer;
+        border: 1px solid var(--gray-100);
+
+        svg {
+            fill: var(--white);
+
+            path {
+                fill: var(--white);
+            }
+
+            width: 12px;
+            height: 12px;
+        }
+    }
+
+    &__centerBottomNavigationNext,
+    &__centerBottomNavigationPrev {
+        top: unset;
+        bottom: 10px;
+        background-color: var(--white);
+
+        svg {
+            fill: var(--color-primary-main);
+
+            path {
+                fill: var(--color-primary-main);
+            }
+
+            width: 12px;
+            height: 12px;
+        }
+    }
+
+    &__centerBottomNavigationNext {
+        right: calc(50% + 16px) !important;
+        left: unset !important;
+    }
+
+    &__centerBottomNavigationPrev {
+        right: calc(50% - 16px) !important;
+        left: unset !important;
+    }
+
+    &__prev {
+        right: var(--spacing-xx-large);
+    }
+
+    &__next {
+        left: var(--spacing-xx-large);
+    }
+
+    &__disable {
+        pointer-events: none;
+        opacity: 0.3;
+        cursor: unset;
+
+        svg {
+            fill: var(--gray-200);
+        }
+    }
+}
+
+@include down(400px) {
+    .root {
+        &__fadePrev {
+            display: none;
+        }
+
+        &__fadeNext {
+            display: none;
+        }
+    }
+}

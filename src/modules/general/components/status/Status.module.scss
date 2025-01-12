@@ -1,0 +1,44 @@
+@import "@styles/scss/partials/mixins";
+@import "@styles/scss/partials/variables";
+
+.root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 var(--spacing-normal) !important;
+    white-space: nowrap;
+    height: 22px;
+    border-radius: var(--border-radius-large);
+    width: fit-content;
+    min-width: 80px;
+    font-size: var(--font-size-tiny) !important;
+    font-weight: var(--font-weight-tiny) !important;
+    &__fullWidth {
+        span {
+            width: 100%;
+        }
+    }
+}
+
+.root:global(.status_gray) {
+    background-color: var(--color-gray-level-200);
+    color: var(--color-gray-level-900);
+}
+
+.root:global(.status_blue) {
+    background-color: var(--color-info-minus-3);
+    color: var(--color-info-plus-2);
+}
+
+.root:global(.status_red) {
+    background-color: var(--color-error-minus-3);
+    color: var(--color-error-plus-2);
+}
+
+.root:global(.status_green) {
+    background-color: var(--color-success-minus-3);
+    color: var(--color-success-plus-2);
+}

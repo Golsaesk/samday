@@ -1,0 +1,87 @@
+@import "@styles/scss/partials/variables";
+@import "@styles/scss/partials/mixins";
+
+.root {
+    &__desktop {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: 305px;
+
+        &__container {
+            position: relative;
+            width: 100%;
+            z-index: 1;
+            height: 305px;
+            background: linear-gradient(-90deg,
+                    rgba(8, 12, 32, 1) 0%,
+                    rgba(8, 12, 32, 1) 250px,
+                    rgba(255, 255, 255, 0) 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &__box {
+                width: 100%;
+                max-width: calc(var(--max-container-size) - 2 * var(--spacing-panel));
+                z-index: 10;
+                padding: var(--spacing-xx-large);
+            }
+        }
+    }
+}
+
+@include down(750px) {
+    .root {
+
+        &__desktop {
+            display: none;
+        }
+
+        &__mobile {
+            width: 100%;
+            height: auto;
+            background-color: var(--color-primary-minus-1);
+            padding: var(--spacing-xx-large) 0;
+
+            &__wrapper {
+                width: 100%;
+                border-radius: var(--border-radius-large);
+                background-color: var(--color-primary-minus-2);
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                gap: var(--spacing-normal);
+
+                &__image {
+                    width: 100%;
+                    height: 200px;
+                    position: relative;
+                }
+            }
+        }
+    }
+}
+
+[dir="ltr"] {
+    .root {
+        &__desktop {
+            &__container {
+                background: linear-gradient(90deg,
+                        rgba(8, 12, 32, 1) 0%,
+                        rgba(8, 12, 32, 1) 250px,
+                        rgba(255, 255, 255, 0) 100%);
+
+                &__box {
+                    &__button {
+                        svg {
+                            transform: unset;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

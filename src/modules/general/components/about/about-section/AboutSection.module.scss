@@ -1,0 +1,151 @@
+@import "@styles/scss/partials/variables";
+@import "@styles/scss/partials/mixins";
+
+.root {
+    width: 100%;
+    scroll-margin-top: 200px;
+
+    &__list {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: center;
+        gap: var(--spacing-xx-large);
+
+        &__item {
+            width: 106px;
+        }
+
+        &__last {
+            width: 80%;
+            margin-bottom: var(--spacing-x-large);
+        }
+
+        &__secretary {
+            margin-bottom: var(--spacing-x-large);
+        }
+    }
+
+    &__body {
+        width: 100%;
+
+        div:global(.header) {
+            width: 100%;
+            min-height: 32px;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--spacing-normal);
+            background-color: var(--color-primary-main);
+            border-radius: var(--border-radius-small);
+
+            span {
+                width: auto;
+                font-size: var(--font-size-body2);
+                font-weight: var(--font-weight-body2);
+                color: var(--color-gray-level-0);
+                text-align: center;
+            }
+        }
+
+        p,
+        ol {
+            margin: 0;
+            padding: 0;
+            font-size: var(--font-size-body1);
+            font-weight: var(--font-weight-body1);
+            line-height: var(--line-height-body1);
+            color: var(--color-text-primary-minus-1);
+            list-style-position: inside;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        div:global(.section) {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: var(--spacing-x-large);
+            border-bottom: 1px solid var(--color-divider-1);
+            padding: var(--spacing-xxx-large) 0;
+
+            &:last-child {
+                border-bottom: 0;
+                padding-bottom: 0;
+            }
+
+            h5 {
+                margin: 0;
+                font-size: var(--font-size-h5);
+                font-weight: var(--font-weight-h5);
+                line-height: var(--line-height-h5);
+                color: var(--color-primary-main);
+            }
+
+            ol {
+                padding: 0;
+                list-style-position: inside;
+            }
+        }
+    }
+}
+
+@include xs {
+    .root {
+        &__body {
+            div:global(.header) {
+                span {
+                    font-size: var(--font-size-tiny);
+                    font-weight: var(--font-weight-tiny);
+                    line-height: var(--line-height-tiny);
+                }
+            }
+
+            p,
+            ol {
+                font-size: var(--font-size-body2);
+                font-weight: var(--font-weight-body2);
+                line-height: var(--line-height-body2);
+            }
+
+            div:global(.section) {
+                padding: var(--spacing-xx-large) 0;
+
+                h5 {
+                    font-size: var(--font-size-button1);
+                    font-weight: var(--font-weight-button1);
+                    line-height: var(--line-height-button1);
+                }
+            }
+        }
+    }
+}
+
+[dir="ltr"] {
+    .root {
+        font-feature-settings: normal;
+
+        &__list {
+            &__item {
+                width: 116px;
+            }
+        }
+    }
+}
+
+@include down(340px) {
+    [dir="ltr"] {
+        .root {
+            &__list {
+                gap: var(--spacing-x-large);
+            }
+        }
+    }
+}

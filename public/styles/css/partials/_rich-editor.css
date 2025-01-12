@@ -1,0 +1,123 @@
+.RichEditor-root {
+    background: var(--color-background-paper-main);
+    border: 1px solid var(--color-gray-level-300);
+    font-size: var(--font-size-body1);
+    border-radius: var(--spacing-normal);
+}
+
+.RichEditor-root svg {
+    fill: var(--color-gray-level-900)
+}
+
+.RichEditor-editor {
+    cursor: text;
+    font-size: var(--font-size-body1);
+    font-family: var(--font-family), var(--font-family-alternate);
+}
+.public-DraftEditorPlaceholder-root{
+    position: absolute;
+    color: var(--color-gray-level-400);
+    font-size: var(--font-size-body1);
+    font-weight: var(--font-weight-body1);
+}
+
+.RichEditor-editor .public-DraftEditorPlaceholder-root,
+.RichEditor-editor .public-DraftEditor-content {
+    margin: 0;
+    padding: 16px;
+}
+
+.RichEditor-editor .public-DraftEditor-content {
+    height: 140px !important;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.RichEditor-editor .DraftEditor-blockquote {
+    border-left: 5px solid #eee;
+    color: #666;
+    font-style: italic;
+    margin: 16px 0;
+    padding: 10px 20px;
+}
+
+.RichEditor-editor .public-DraftStyleDefault-pre {
+    background-color: rgba(0, 0, 0, 0.05);
+    font-size: 16px;
+
+    padding: 20px;
+}
+
+.RichEditor-controls {
+    user-select: none;
+}
+
+.RichEditor-controls div {
+    direction: ltr;
+}
+
+.RichEditor-styleButton {
+    color: #999;
+    cursor: pointer;
+    margin-right: 16px;
+    padding: 2px 0;
+    display: inline-block;
+}
+
+.RichEditor-activeButton {
+    color: #5890ff;
+}
+
+.RichEditor-controls {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: var(--spacing-x-large);
+
+}
+
+.RichEditor-controls div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-bottom: var(--spacing-small);
+    gap: var(--spacing-x-large);
+}
+
+.RichEditor-controls .tools {
+    box-sizing: border-box;
+    background-color: var(--color-background-paper-level-1) !important;
+    border: 1px solid var(--color-gray-level-300);
+    padding: 0;
+    cursor: pointer;
+    border-radius: var(--spacing-x-small);
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.RichEditor-controls .tools-selected {
+    background-color: var(--color-gray-level-200) !important;
+}
+
+.RichEditor-controls .tools:hover {
+    background-color: var(--color-gray-level-200);
+    border-radius: var(--spacing-x-small);
+}
+
+.RichEditor-controls .tools svg {
+    width: 22px;
+    height: 22px;
+}
+
+.panelFlexRow {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.panelFlexColumn {
+    flex-direction: column;
+}

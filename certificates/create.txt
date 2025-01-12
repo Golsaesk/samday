@@ -1,0 +1,7 @@
+1- openssl req -new -newkey rsa:2048 -nodes -keyout site.key -out site.csr
+2- openssl x509 -req -in site.csr -signkey site.key -out site.crt
+
+Note: 
+1- Password: Zxcv@123
+2- Set this in your environment
+    NODE_TLS_REJECT_UNAUTHORIZED=1
